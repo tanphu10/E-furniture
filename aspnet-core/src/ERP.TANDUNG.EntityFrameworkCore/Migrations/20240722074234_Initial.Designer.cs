@@ -13,7 +13,7 @@ using Volo.Abp.EntityFrameworkCore;
 namespace ERP.TANDUNG.Migrations
 {
     [DbContext(typeof(TANDUNGDbContext))]
-    [Migration("20240722051401_Initial")]
+    [Migration("20240722074234_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
