@@ -62,7 +62,7 @@ public class TANDUNGAuthServerModule : AbpModule
         {
             builder.AddValidation(options =>
             {
-                options.AddAudiences("TANDUNG");
+                options.AddAudiences("TANDUNG","TANDUNG.Admin");
                 options.UseLocalServer();
                 options.UseAspNetCore();
             });

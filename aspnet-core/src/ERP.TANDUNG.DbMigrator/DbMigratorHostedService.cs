@@ -7,6 +7,7 @@ using ERP.TANDUNG.Data;
 using Serilog;
 using Volo.Abp;
 using Volo.Abp.Data;
+using ERP.TANDUNG.Seeding;
 
 namespace ERP.TANDUNG.DbMigrator;
 
@@ -21,7 +22,7 @@ public class DbMigratorHostedService : IHostedService
         _configuration = configuration;
     }
 
-    public async Task StartAsync(CancellationToken cancellationToken)
+    public async Task StartAsync(CancellationToken cancellationToken)   
     {
         using (var application = await AbpApplicationFactory.CreateAsync<TANDUNGDbMigratorModule>(options =>
         {
@@ -37,6 +38,10 @@ public class DbMigratorHostedService : IHostedService
                 .ServiceProvider
                 .GetRequiredService<TANDUNGDbMigrationService>()
                 .MigrateAsync();
+            await application
+               .ServiceProvider
+               .GetRequiredService<IdentityDataSeeder>()
+               .SeedAsync("admin@gmail.com","Abc@123$");
 
             await application.ShutdownAsync();
 

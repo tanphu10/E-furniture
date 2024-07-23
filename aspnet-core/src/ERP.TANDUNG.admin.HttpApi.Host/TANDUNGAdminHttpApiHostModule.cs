@@ -76,16 +76,16 @@ public class TANDUNGAdminHttpApiHostModule : AbpModule
             {
                 options.FileSets.ReplaceEmbeddedByPhysical<TANDUNGDomainSharedModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.Admin.Domain.Shared"));
+                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.Domain.Shared"));
                 options.FileSets.ReplaceEmbeddedByPhysical<TANDUNGDomainModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.Admin.Domain"));
+                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.Domain"));
                 options.FileSets.ReplaceEmbeddedByPhysical<TANDUNGApplicationContractsModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.Admin.Application.Contracts"));
+                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.admin.Application.Contracts"));
                 options.FileSets.ReplaceEmbeddedByPhysical<TANDUNGAdminApplicationModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.Admin.Application"));
+                        $"..{Path.DirectorySeparatorChar}ERP.TANDUNG.admin.Application"));
             });
         }
     }
@@ -207,7 +207,7 @@ public class TANDUNGAdminHttpApiHostModule : AbpModule
 
             var configuration = context.GetConfiguration();
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
-            options.OAuthScopes("TANDUNG");
+            options.OAuthScopes("TANDUNG.Admin");
         });
 
         app.UseAuditing();

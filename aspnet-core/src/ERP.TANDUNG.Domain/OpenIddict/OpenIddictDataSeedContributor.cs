@@ -38,7 +38,7 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
         IOpenIddictScopeRepository openIddictScopeRepository,
         IOpenIddictScopeManager scopeManager,
         IPermissionDataSeeder permissionDataSeeder,
-        IStringLocalizer<OpenIddictResponse> l )
+        IStringLocalizer<OpenIddictResponse> l)
     {
         _configuration = configuration;
         _openIddictApplicationRepository = openIddictApplicationRepository;
@@ -60,67 +60,111 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
     {
         if (await _openIddictScopeRepository.FindByNameAsync("TANDUNG") == null)
         {
-            await _scopeManager.CreateAsync(new OpenIddictScopeDescriptor {
-                Name = "TANDUNG", DisplayName = "TANDUNG API", Resources = { "TANDUNG" }
+            await _scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+            {
+                Name = "TANDUNG",
+                DisplayName = "TANDUNG API",
+                Resources = { "TANDUNG" }
+            });
+        }
+        if (await _openIddictScopeRepository.FindByNameAsync("TANDUNG.Admin") == null)
+        {
+            await _scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+            {
+                Name = "TANDUNG.Admin",
+                DisplayName = "TANDUNG Admin API",
+                Resources = { "TANDUNG.Admin" }
             });
         }
     }
 
     private async Task CreateApplicationsAsync()
     {
-        var commonScopes = new List<string> {
+        var commonScopes = new List<string>
+        {
             OpenIddictConstants.Permissions.Scopes.Address,
             OpenIddictConstants.Permissions.Scopes.Email,
             OpenIddictConstants.Permissions.Scopes.Phone,
             OpenIddictConstants.Permissions.Scopes.Profile,
-            OpenIddictConstants.Permissions.Scopes.Roles,
-            "TANDUNG"
+            OpenIddictConstants.Permissions.Scopes.Roles
         };
+
+        var adminScopes = new List<string>();
+        adminScopes.AddRange(commonScopes);
+        adminScopes.Add("TANDUNG.Admin");
+
+        var clientScopes = new List<string>();
+        clientScopes.AddRange(commonScopes);
+        clientScopes.Add("TANDUNG");
 
         var configurationSection = _configuration.GetSection("OpenIddict:Applications");
 
-
-        //Console Test / Angular Client
-        var consoleAndAngularClientId = configurationSection["TANDUNG_App:ClientId"];
-        if (!consoleAndAngularClientId.IsNullOrWhiteSpace())
+        //Admin Client
+        var webAdminClientId = configurationSection["TANDUNG_Admin:ClientId"];
+        if (!webAdminClientId.IsNullOrWhiteSpace())
         {
-            var consoleAndAngularClientRootUrl = configurationSection["TANDUNG_App:RootUrl"]?.TrimEnd('/');
+            var adminWebClientRootUrl = configurationSection["TANDUNG_Admin:RootUrl"].TrimEnd('/');
             await CreateApplicationAsync(
-                name: consoleAndAngularClientId!,
-                type: OpenIddictConstants.ClientTypes.Public,
+                name: webAdminClientId,
+                type: OpenIddictConstants.ClientTypes.Confidential,
                 consentType: OpenIddictConstants.ConsentTypes.Implicit,
-                displayName: "Console Test / Angular Application",
-                secret: null,
-                grantTypes: new List<string> {
-                    OpenIddictConstants.GrantTypes.AuthorizationCode,
+                displayName: "Admin Application",
+                secret: configurationSection["TANDUNG_Admin:ClientSecret"] ?? "abcd*123",
+                grantTypes: new List<string> //Hybrid flow
+                {
                     OpenIddictConstants.GrantTypes.Password,
-                    OpenIddictConstants.GrantTypes.ClientCredentials,
-                    OpenIddictConstants.GrantTypes.RefreshToken
+                    OpenIddictConstants.GrantTypes.RefreshToken,
+                    OpenIddictConstants.GrantTypes.Implicit
                 },
-                scopes: commonScopes,
-                redirectUri: consoleAndAngularClientRootUrl,
-                clientUri: consoleAndAngularClientRootUrl,
-                postLogoutRedirectUri: consoleAndAngularClientRootUrl
+                scopes: adminScopes,
+                redirectUri: adminWebClientRootUrl,
+                clientUri: adminWebClientRootUrl,
+                postLogoutRedirectUri: adminWebClientRootUrl
             );
         }
 
+        //Web Client
+        var webClientId = configurationSection["TANDUNG_Web:ClientId"];
+        if (!webClientId.IsNullOrWhiteSpace())
+        {
+            var webClientRootUrl = configurationSection["TANDUNG_Web:RootUrl"].EnsureEndsWith('/');
 
-
+            /* TANDUNG_Web client is only needed if you created a tiered
+             * solution. Otherwise, you can delete this client. */
+            await CreateApplicationAsync(
+                name: webClientId,
+                type: OpenIddictConstants.ClientTypes.Confidential,
+                consentType: OpenIddictConstants.ConsentTypes.Implicit,
+                displayName: "Web Application",
+                secret: configurationSection["TANDUNG_Web:ClientSecret"] ?? "abcd*123",
+                grantTypes: new List<string> //Hybrid flow
+                {
+                    OpenIddictConstants.GrantTypes.AuthorizationCode,
+                    OpenIddictConstants.GrantTypes.Implicit
+                },
+                scopes: clientScopes,
+                redirectUri: $"{webClientRootUrl}signin-oidc",
+                clientUri: webClientRootUrl,
+                postLogoutRedirectUri: $"{webClientRootUrl}signout-callback-oidc"
+            );
+        }
 
         // Swagger Client
-        var swaggerClientId = configurationSection["TANDUNG_Swagger:ClientId"];
+        var swaggerClientId = configurationSection["TANDUNG_Admin_Swagger:ClientId"];
         if (!swaggerClientId.IsNullOrWhiteSpace())
         {
-            var swaggerRootUrl = configurationSection["TANDUNG_Swagger:RootUrl"]?.TrimEnd('/');
-
+            var swaggerRootUrl = configurationSection["TANDUNG_Admin_Swagger:RootUrl"].TrimEnd('/');
             await CreateApplicationAsync(
-                name: swaggerClientId!,
+                name: swaggerClientId,
                 type: OpenIddictConstants.ClientTypes.Public,
                 consentType: OpenIddictConstants.ConsentTypes.Implicit,
-                displayName: "Swagger Application",
+                displayName: "Swagger Admin Application",
                 secret: null,
-                grantTypes: new List<string> { OpenIddictConstants.GrantTypes.AuthorizationCode, },
-                scopes: commonScopes,
+                grantTypes: new List<string>
+                {
+                    OpenIddictConstants.GrantTypes.AuthorizationCode,
+                },
+                scopes: adminScopes,
                 redirectUri: $"{swaggerRootUrl}/swagger/oauth2-redirect.html",
                 clientUri: swaggerRootUrl
             );
@@ -154,7 +198,8 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
 
         var client = await _openIddictApplicationRepository.FindByClientIdAsync(name);
 
-        var application = new AbpApplicationDescriptor {
+        var application = new AbpApplicationDescriptor
+        {
             ClientId = name,
             ClientType = type,
             ClientSecret = secret,
