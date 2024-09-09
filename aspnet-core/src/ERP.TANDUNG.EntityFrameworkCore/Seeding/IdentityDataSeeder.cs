@@ -43,7 +43,6 @@ namespace ERP.TANDUNG.Seeding
             CurrentTenant = currentTenant;
             IdentityOptions = identityOptions;
         }
-
         [UnitOfWork]
         public virtual async Task<IdentityDataSeedResult> SeedAsync(string adminEmail, string adminPassword, Guid? tenantId = null)
         {

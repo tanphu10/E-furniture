@@ -69,7 +69,6 @@ public class TANDUNGDbContext :
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     // TANDUNG
-
     public DbSet<ProductAttribute> ProductAttributes { get; set; }
     public DbSet<Inventory> Inventories { get; set; }
     public DbSet<InventoryTicket> InventoryTickets { get; set; }
