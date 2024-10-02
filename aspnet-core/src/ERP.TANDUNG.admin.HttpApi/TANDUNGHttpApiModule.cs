@@ -36,6 +36,8 @@ public class TANDUNGHttpApiModule : AbpModule
                 .AddBaseTypes(
                     typeof(AbpUiResource)
                 );
+            options.Languages.Add(new LanguageInfo("en", "en", "English"));
+            options.Languages.Add(new LanguageInfo("vi", "vn", "Tiếng Việt"));
         });
     }
 }

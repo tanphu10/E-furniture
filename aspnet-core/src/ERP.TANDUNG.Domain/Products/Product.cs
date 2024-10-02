@@ -10,6 +10,29 @@ namespace ERP.TANDUNG.Products
     public class Product:AuditedAggregateRoot<Guid>
 
     {
+        public Product()
+        {
+        }
+
+        public Product(Guid id,Guid manufacturerID, string name, string code, string slug, ProductType productType, string sKU, int sortOrder, bool isActive, Guid categoryId, string seoMetaDescription, string description, string thumbnailPicture,double sellPrice,
+            string categoryName,string categorySlug)
+        {
+            Id = id;
+            ManufacturerID = manufacturerID;
+            Name = name;
+            Code = code;
+            Slug = slug;
+            ProductType = productType;
+            SKU = sKU;
+            SortOrder = sortOrder;
+            IsActive = isActive;
+            CategoryId = categoryId;
+            SeoMetaDescription = seoMetaDescription;
+            Description = description;
+            ThumbnailPicture = thumbnailPicture;
+            SellPrice = sellPrice;
+        }
+
         public Guid ManufacturerID { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
@@ -19,9 +42,13 @@ namespace ERP.TANDUNG.Products
         public int SortOrder { get; set; }
         public bool IsActive { get; set; }
         public Guid CategoryId { get; set; }
+        public bool Visibility { get; set; }
         public string SeoMetaDescription { get; set; }
         public string Description { get; set; }
         public string ThumbnailPicture { get; set; }
+        public double SellPrice { get; set; }
+        public string CategoryName { get; set; }
+        public string CategorySlug { get; set; }
 
     }
 

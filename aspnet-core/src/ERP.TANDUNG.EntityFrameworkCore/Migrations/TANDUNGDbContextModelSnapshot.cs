@@ -528,6 +528,16 @@ namespace ERP.TANDUNG.Migrations
                     b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("CategorySlug")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -586,6 +596,9 @@ namespace ERP.TANDUNG.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
+                    b.Property<double>("SellPrice")
+                        .HasColumnType("float");
+
                     b.Property<string>("SeoMetaDescription")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -604,6 +617,9 @@ namespace ERP.TANDUNG.Migrations
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
+
+                    b.Property<bool>("Visibility")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
