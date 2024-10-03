@@ -6700,3 +6700,644 @@ System.FormatException: The input is not a valid Base-64 string as it contains a
 2024-10-02 13:43:25.008 +07:00 [INF] Executed action ERP.TANDUNG.Admin.ProductsAppService.ProductsAppService.GetListAsync (ERP.TANDUNG.admin.Application) in 116.1987ms
 2024-10-02 13:43:25.008 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.ProductsAppService.ProductsAppService.GetListAsync (ERP.TANDUNG.admin.Application)'
 2024-10-02 13:43:25.009 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/products - 200 null application/json; charset=utf-8 130.7363ms
+2024-10-03 10:24:40.124 +07:00 [INF] Starting ERP.TANDUNG.Admin.HttpApi.Host.
+2024-10-03 10:25:00.302 +07:00 [INF] Loaded ABP modules:
+2024-10-03 10:25:00.304 +07:00 [INF] - ERP.TANDUNG.Admin.TANDUNGAdminHttpApiHostModule
+2024-10-03 10:25:00.304 +07:00 [INF]   - ERP.TANDUNG.Admin.TANDUNGHttpApiModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - ERP.TANDUNG.Admin.TANDUNGApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - ERP.TANDUNG.TANDUNGDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2024-10-03 10:25:00.304 +07:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2024-10-03 10:25:00.304 +07:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2024-10-03 10:25:00.304 +07:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2024-10-03 10:25:00.304 +07:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2024-10-03 10:25:00.304 +07:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.FluentValidation.AbpFluentValidationModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Http.AbpHttpModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Http.AbpHttpAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Minify.AbpMinifyModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2024-10-03 10:25:00.304 +07:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2024-10-03 10:25:00.304 +07:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2024-10-03 10:25:00.304 +07:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2024-10-03 10:25:00.304 +07:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-03 10:25:00.304 +07:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2024-10-03 10:25:00.304 +07:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2024-10-03 10:25:00.304 +07:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2024-10-03 10:25:00.304 +07:00 [INF]   - ERP.TANDUNG.Admin.TANDUNGAdminApplicationModule
+2024-10-03 10:25:00.304 +07:00 [INF]     - ERP.TANDUNG.TANDUNGDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2024-10-03 10:25:00.304 +07:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.Users.AbpUsersDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.PermissionManagement.OpenIddict.AbpPermissionManagementDomainOpenIddictModule
+2024-10-03 10:25:00.304 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2024-10-03 10:25:00.304 +07:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2024-10-03 10:25:00.305 +07:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2024-10-03 10:25:00.305 +07:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2024-10-03 10:25:00.305 +07:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.Account.AbpAccountApplicationModule
+2024-10-03 10:25:00.305 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityApplicationModule
+2024-10-03 10:25:00.305 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.BlobStoring.FileSystem.AbpBlobStoringFileSystemModule
+2024-10-03 10:25:00.305 +07:00 [INF]       - Volo.Abp.BlobStoring.AbpBlobStoringModule
+2024-10-03 10:25:00.305 +07:00 [INF]   - ERP.TANDUNG.EntityFrameworkCore.TANDUNGEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]         - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2024-10-03 10:25:00.305 +07:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2024-10-03 10:25:00.305 +07:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2024-10-03 10:25:01.358 +07:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2024-10-03 10:25:01.370 +07:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2024-10-03 10:25:04.702 +07:00 [INF] User profile is available. Using 'C:\Users\T14\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-03 10:25:04.950 +07:00 [INF] Initialized all ABP modules.
+2024-10-03 10:25:05.496 +07:00 [INF] Now listening on: https://localhost:5001
+2024-10-03 10:25:05.497 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-03 10:25:05.497 +07:00 [INF] Hosting environment: Development
+2024-10-03 10:25:05.497 +07:00 [INF] Content root path: D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.HttpApi.Host
+2024-10-03 10:25:07.969 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - null null
+2024-10-03 10:25:10.481 +07:00 [INF] Executing endpoint 'ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host)'
+2024-10-03 10:25:10.526 +07:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ERP.TANDUNG.Admin.Controllers.HomeController (ERP.TANDUNG.admin.HttpApi.Host).
+2024-10-03 10:25:10.570 +07:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2024-10-03 10:25:10.577 +07:00 [INF] Executed action ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host) in 44.5029ms
+2024-10-03 10:25:10.577 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host)'
+2024-10-03 10:25:10.592 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - 302 0 null 2632.3979ms
+2024-10-03 10:25:10.601 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2024-10-03 10:25:10.705 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 104.4108ms
+2024-10-03 10:25:10.735 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-03 10:25:10.744 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13796 application/javascript; charset=utf-8 9.6575ms
+2024-10-03 10:25:10.750 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2024-10-03 10:25:10.933 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 183.3374ms
+2024-10-03 10:25:10.976 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2024-10-03 10:25:11.463 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 487.6444ms
+2024-10-03 10:25:48.615 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/abp/Swashbuckle/SetCsrfCookie - null null
+2024-10-03 10:25:48.619 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/abp/Swashbuckle/SetCsrfCookie - 404 0 null 5.5069ms
+2024-10-03 10:25:48.621 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/abp/Swashbuckle/SetCsrfCookie, Response status code: 404
+2024-10-03 10:25:48.827 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - null null
+2024-10-03 10:25:48.838 +07:00 [INF] Executing endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:25:48.857 +07:00 [INF] Route matched with {action = "GetPermission", controller = "Roles", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.PermissionManagement.GetPermissionListResultDto] GetPermissionAsync(System.String, System.String) on controller ERP.TANDUNG.Admin.Roles.RolesAppService (ERP.TANDUNG.admin.Application).
+2024-10-03 10:25:49.454 +07:00 [INF] Authorization failed. These requirements were not met:
+PermissionRequirement: AbpIdentity.Roles.ManagePermissions
+2024-10-03 10:25:49.692 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": "Volo.Authorization:010002",
+  "message": "Ủy quyển thất bại! Đã đưa ra chính sách chưa được cấp: AbpIdentity.Roles.ManagePermissions",
+  "details": null,
+  "data": {
+    "PolicyName": "AbpIdentity.Roles.ManagePermissions"
+  },
+  "validationErrors": null
+}
+
+2024-10-03 10:25:49.694 +07:00 [WRN] Exception of type 'Volo.Abp.Authorization.AbpAuthorizationException' was thrown.
+Volo.Abp.Authorization.AbpAuthorizationException: Exception of type 'Volo.Abp.Authorization.AbpAuthorizationException' was thrown.
+   at Microsoft.AspNetCore.Authorization.AbpAuthorizationServiceExtensions.CheckAsync(IAuthorizationService authorizationService, String policyName)
+   at ERP.TANDUNG.Admin.Roles.RolesAppService.CheckProviderPolicy(String providerName) in D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.Application\Roles\RolesAppService.cs:line 160
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.GlobalFeatures.GlobalFeatureInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Auditing.AuditingInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Validation.ValidationInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Uow.UnitOfWorkInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync(String providerName, String providerKey) in D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.Application\Roles\RolesAppService.cs:line 49
+   at lambda_method1847(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2024-10-03 10:25:49.694 +07:00 [WRN] Code:Volo.Authorization:010002
+2024-10-03 10:25:49.697 +07:00 [WRN] ---------- Exception Data ----------
+PolicyName = AbpIdentity.Roles.ManagePermissions
+
+2024-10-03 10:25:49.720 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-10-03 10:25:49.721 +07:00 [INF] Executed action ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application) in 863.9837ms
+2024-10-03 10:25:49.721 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:25:50.110 +07:00 [DBG] Added 0 entity changes to the current audit log
+2024-10-03 10:25:50.112 +07:00 [DBG] Added 0 entity changes to the current audit log
+2024-10-03 10:25:50.116 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - 401 0 null 1289.6032ms
+2024-10-03 10:26:50.327 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - null null
+2024-10-03 10:26:50.335 +07:00 [INF] Executing endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:26:50.336 +07:00 [INF] Route matched with {action = "GetPermission", controller = "Roles", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.PermissionManagement.GetPermissionListResultDto] GetPermissionAsync(System.String, System.String) on controller ERP.TANDUNG.Admin.Roles.RolesAppService (ERP.TANDUNG.admin.Application).
+2024-10-03 10:26:50.343 +07:00 [INF] Authorization failed. These requirements were not met:
+PermissionRequirement: AbpIdentity.Roles.ManagePermissions
+2024-10-03 10:26:50.497 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": "Volo.Authorization:010002",
+  "message": "Ủy quyển thất bại! Đã đưa ra chính sách chưa được cấp: AbpIdentity.Roles.ManagePermissions",
+  "details": null,
+  "data": {
+    "PolicyName": "AbpIdentity.Roles.ManagePermissions"
+  },
+  "validationErrors": null
+}
+
+2024-10-03 10:26:50.497 +07:00 [WRN] Exception of type 'Volo.Abp.Authorization.AbpAuthorizationException' was thrown.
+Volo.Abp.Authorization.AbpAuthorizationException: Exception of type 'Volo.Abp.Authorization.AbpAuthorizationException' was thrown.
+   at Microsoft.AspNetCore.Authorization.AbpAuthorizationServiceExtensions.CheckAsync(IAuthorizationService authorizationService, String policyName)
+   at ERP.TANDUNG.Admin.Roles.RolesAppService.CheckProviderPolicy(String providerName) in D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.Application\Roles\RolesAppService.cs:line 160
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.GlobalFeatures.GlobalFeatureInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Auditing.AuditingInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Validation.ValidationInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Uow.UnitOfWorkInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync(String providerName, String providerKey) in D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.Application\Roles\RolesAppService.cs:line 49
+   at lambda_method1847(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2024-10-03 10:26:50.497 +07:00 [WRN] Code:Volo.Authorization:010002
+2024-10-03 10:26:50.497 +07:00 [WRN] ---------- Exception Data ----------
+PolicyName = AbpIdentity.Roles.ManagePermissions
+
+2024-10-03 10:26:50.498 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-10-03 10:26:50.499 +07:00 [INF] Executed action ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application) in 162.6207ms
+2024-10-03 10:26:50.499 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:26:50.521 +07:00 [DBG] Added 0 entity changes to the current audit log
+2024-10-03 10:26:50.523 +07:00 [DBG] Added 0 entity changes to the current audit log
+2024-10-03 10:26:50.528 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - 401 0 null 201.2887ms
+2024-10-03 10:28:02.526 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - null null
+2024-10-03 10:28:02.529 +07:00 [INF] Executing endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:28:02.529 +07:00 [INF] Route matched with {action = "GetPermission", controller = "Roles", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.PermissionManagement.GetPermissionListResultDto] GetPermissionAsync(System.String, System.String) on controller ERP.TANDUNG.Admin.Roles.RolesAppService (ERP.TANDUNG.admin.Application).
+2024-10-03 10:28:07.080 +07:00 [INF] Authorization failed. These requirements were not met:
+PermissionRequirement: AbpIdentity.Roles.ManagePermissions
+2024-10-03 10:28:07.311 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": "Volo.Authorization:010002",
+  "message": "Ủy quyển thất bại! Đã đưa ra chính sách chưa được cấp: AbpIdentity.Roles.ManagePermissions",
+  "details": null,
+  "data": {
+    "PolicyName": "AbpIdentity.Roles.ManagePermissions"
+  },
+  "validationErrors": null
+}
+
+2024-10-03 10:28:07.311 +07:00 [WRN] Exception of type 'Volo.Abp.Authorization.AbpAuthorizationException' was thrown.
+Volo.Abp.Authorization.AbpAuthorizationException: Exception of type 'Volo.Abp.Authorization.AbpAuthorizationException' was thrown.
+   at Microsoft.AspNetCore.Authorization.AbpAuthorizationServiceExtensions.CheckAsync(IAuthorizationService authorizationService, String policyName)
+   at ERP.TANDUNG.Admin.Roles.RolesAppService.CheckProviderPolicy(String providerName) in D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.Application\Roles\RolesAppService.cs:line 160
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.GlobalFeatures.GlobalFeatureInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Auditing.AuditingInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Validation.ValidationInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapter.ProceedAsync()
+   at Volo.Abp.Uow.UnitOfWorkInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync(String providerName, String providerKey) in D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.Application\Roles\RolesAppService.cs:line 49
+   at lambda_method1847(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2024-10-03 10:28:07.311 +07:00 [WRN] Code:Volo.Authorization:010002
+2024-10-03 10:28:07.311 +07:00 [WRN] ---------- Exception Data ----------
+PolicyName = AbpIdentity.Roles.ManagePermissions
+
+2024-10-03 10:28:07.311 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-10-03 10:28:07.311 +07:00 [INF] Executed action ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application) in 4782.0481ms
+2024-10-03 10:28:07.311 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:28:07.326 +07:00 [DBG] Added 0 entity changes to the current audit log
+2024-10-03 10:28:07.327 +07:00 [DBG] Added 0 entity changes to the current audit log
+2024-10-03 10:28:07.328 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - 401 0 null 4802.0967ms
+2024-10-03 10:28:29.345 +07:00 [INF] Starting ERP.TANDUNG.Admin.HttpApi.Host.
+2024-10-03 10:28:34.671 +07:00 [INF] Loaded ABP modules:
+2024-10-03 10:28:34.672 +07:00 [INF] - ERP.TANDUNG.Admin.TANDUNGAdminHttpApiHostModule
+2024-10-03 10:28:34.672 +07:00 [INF]   - ERP.TANDUNG.Admin.TANDUNGHttpApiModule
+2024-10-03 10:28:34.672 +07:00 [INF]     - ERP.TANDUNG.Admin.TANDUNGApplicationContractsModule
+2024-10-03 10:28:34.672 +07:00 [INF]       - ERP.TANDUNG.TANDUNGDomainSharedModule
+2024-10-03 10:28:34.672 +07:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2024-10-03 10:28:34.673 +07:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2024-10-03 10:28:34.673 +07:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2024-10-03 10:28:34.673 +07:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2024-10-03 10:28:34.673 +07:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2024-10-03 10:28:34.673 +07:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.FluentValidation.AbpFluentValidationModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Http.AbpHttpModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Http.AbpHttpAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Minify.AbpMinifyModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2024-10-03 10:28:34.673 +07:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2024-10-03 10:28:34.673 +07:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - ERP.TANDUNG.Admin.TANDUNGAdminApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - ERP.TANDUNG.TANDUNGDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.Users.AbpUsersDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.PermissionManagement.OpenIddict.AbpPermissionManagementDomainOpenIddictModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2024-10-03 10:28:34.673 +07:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2024-10-03 10:28:34.673 +07:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.Account.AbpAccountApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.BlobStoring.FileSystem.AbpBlobStoringFileSystemModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.BlobStoring.AbpBlobStoringModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - ERP.TANDUNG.EntityFrameworkCore.TANDUNGEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]         - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2024-10-03 10:28:34.673 +07:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2024-10-03 10:28:35.263 +07:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2024-10-03 10:28:35.282 +07:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2024-10-03 10:28:36.408 +07:00 [INF] User profile is available. Using 'C:\Users\T14\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-03 10:28:36.708 +07:00 [INF] Initialized all ABP modules.
+2024-10-03 10:28:36.962 +07:00 [INF] Now listening on: https://localhost:5001
+2024-10-03 10:28:36.962 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-03 10:28:36.962 +07:00 [INF] Hosting environment: Development
+2024-10-03 10:28:36.962 +07:00 [INF] Content root path: D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.HttpApi.Host
+2024-10-03 10:28:38.839 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - null null
+2024-10-03 10:28:40.275 +07:00 [INF] Executing endpoint 'ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host)'
+2024-10-03 10:28:40.356 +07:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ERP.TANDUNG.Admin.Controllers.HomeController (ERP.TANDUNG.admin.HttpApi.Host).
+2024-10-03 10:28:40.475 +07:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2024-10-03 10:28:40.486 +07:00 [INF] Executed action ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host) in 124.3653ms
+2024-10-03 10:28:40.487 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host)'
+2024-10-03 10:28:40.505 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - 302 0 null 1674.0505ms
+2024-10-03 10:28:40.535 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2024-10-03 10:28:40.642 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 107.3315ms
+2024-10-03 10:28:40.704 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-03 10:28:40.714 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13796 application/javascript; charset=utf-8 10.5092ms
+2024-10-03 10:28:40.730 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2024-10-03 10:28:40.794 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.67ms
+2024-10-03 10:28:40.853 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2024-10-03 10:28:41.588 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 735.2692ms
+2024-10-03 10:28:48.752 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - null null
+2024-10-03 10:28:48.764 +07:00 [INF] Executing endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:28:48.779 +07:00 [INF] Route matched with {action = "GetPermission", controller = "Roles", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.PermissionManagement.GetPermissionListResultDto] GetPermissionAsync(System.String, System.String) on controller ERP.TANDUNG.Admin.Roles.RolesAppService (ERP.TANDUNG.admin.Application).
+2024-10-03 10:29:59.976 +07:00 [DBG] Added 0 entity changes to the current audit log
+2024-10-03 10:30:00.028 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.PermissionManagement.GetPermissionListResultDto'.
+2024-10-03 10:30:00.049 +07:00 [INF] Executed action ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application) in 71269.5847ms
+2024-10-03 10:30:00.049 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.Roles.RolesAppService.GetPermissionAsync (ERP.TANDUNG.admin.Application)'
+2024-10-03 10:30:00.052 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/app/roles/permission?providerName=R&providerKey=admin - 200 null application/json; charset=utf-8 71300.9222ms
+2024-10-03 11:28:58.684 +07:00 [INF] Starting ERP.TANDUNG.Admin.HttpApi.Host.
+2024-10-03 11:29:04.585 +07:00 [INF] Loaded ABP modules:
+2024-10-03 11:29:04.587 +07:00 [INF] - ERP.TANDUNG.Admin.TANDUNGAdminHttpApiHostModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - ERP.TANDUNG.Admin.TANDUNGHttpApiModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - ERP.TANDUNG.Admin.TANDUNGApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - ERP.TANDUNG.TANDUNGDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2024-10-03 11:29:04.587 +07:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2024-10-03 11:29:04.587 +07:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2024-10-03 11:29:04.587 +07:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2024-10-03 11:29:04.587 +07:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2024-10-03 11:29:04.587 +07:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.FluentValidation.AbpFluentValidationModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Http.AbpHttpModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Http.AbpHttpAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Minify.AbpMinifyModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2024-10-03 11:29:04.587 +07:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2024-10-03 11:29:04.587 +07:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - ERP.TANDUNG.Admin.TANDUNGAdminApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - ERP.TANDUNG.TANDUNGDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.Users.AbpUsersDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.PermissionManagement.OpenIddict.AbpPermissionManagementDomainOpenIddictModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2024-10-03 11:29:04.587 +07:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2024-10-03 11:29:04.587 +07:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.Account.AbpAccountApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.BlobStoring.FileSystem.AbpBlobStoringFileSystemModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.BlobStoring.AbpBlobStoringModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - ERP.TANDUNG.EntityFrameworkCore.TANDUNGEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]         - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2024-10-03 11:29:04.587 +07:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2024-10-03 11:29:05.029 +07:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2024-10-03 11:29:05.046 +07:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2024-10-03 11:29:06.037 +07:00 [INF] User profile is available. Using 'C:\Users\T14\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-03 11:29:06.255 +07:00 [INF] Initialized all ABP modules.
+2024-10-03 11:29:06.488 +07:00 [INF] Now listening on: https://localhost:5001
+2024-10-03 11:29:06.489 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-03 11:29:06.489 +07:00 [INF] Hosting environment: Development
+2024-10-03 11:29:06.489 +07:00 [INF] Content root path: D:\08_ABP E_Commerce\ERP\ERP.TANDUNG\aspnet-core\src\ERP.TANDUNG.admin.HttpApi.Host
+2024-10-03 11:29:07.756 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - null null
+2024-10-03 11:29:11.171 +07:00 [INF] Executing endpoint 'ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host)'
+2024-10-03 11:29:11.234 +07:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller ERP.TANDUNG.Admin.Controllers.HomeController (ERP.TANDUNG.admin.HttpApi.Host).
+2024-10-03 11:29:11.280 +07:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2024-10-03 11:29:11.286 +07:00 [INF] Executed action ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host) in 47.2808ms
+2024-10-03 11:29:11.286 +07:00 [INF] Executed endpoint 'ERP.TANDUNG.Admin.Controllers.HomeController.Index (ERP.TANDUNG.admin.HttpApi.Host)'
+2024-10-03 11:29:11.299 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - 302 0 null 3548.3314ms
+2024-10-03 11:29:11.306 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2024-10-03 11:29:11.426 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 120.4936ms
+2024-10-03 11:29:11.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-03 11:29:11.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2024-10-03 11:29:11.502 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13796 application/javascript; charset=utf-8 18.0701ms
+2024-10-03 11:29:11.582 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.3753ms
+2024-10-03 11:29:11.622 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2024-10-03 11:29:12.166 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 545.4066ms

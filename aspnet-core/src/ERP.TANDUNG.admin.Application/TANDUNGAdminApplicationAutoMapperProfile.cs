@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
-using ERP.TANDUNG.Admin.ProductAttributes;
-using ERP.TANDUNG.Admin.ProductCategories;
-using ERP.TANDUNG.Admin.Products;
-using ERP.TANDUNG.Admin.Roles;
+using ERP.TANDUNG.Admin.Catalog.Manufacturers;
+using ERP.TANDUNG.Admin.Catalog.ProductAttributes;
+using ERP.TANDUNG.Admin.Catalog.ProductCategories;
+using ERP.TANDUNG.Admin.Catalog.Products;
+using ERP.TANDUNG.Admin.System.Roles;
+using ERP.TANDUNG.Admin.System.Users;
 using ERP.TANDUNG.Manufacturers;
 using ERP.TANDUNG.ProductAttributes;
 using ERP.TANDUNG.ProductCategories;
@@ -40,6 +42,10 @@ public class TANDUNGAdminApplicationAutoMapperProfile : Profile
         CreateMap<IdentityRole, RoleDto>().ForMember(x => x.Description, map => map.MapFrom(x => x.ExtraProperties.ContainsKey(RoleConsts.DescriptionFieldName) ? x.ExtraProperties[RoleConsts.DescriptionFieldName] : null));
         CreateMap<IdentityRole, RoleInListDto>().ForMember(x => x.Description, map => map.MapFrom(x => x.ExtraProperties.ContainsKey(RoleConsts.DescriptionFieldName) ? x.ExtraProperties[RoleConsts.DescriptionFieldName] : null));
         CreateMap<CreateUpdateRoleDto, IdentityRole>();
+
+        //User
+        CreateMap<IdentityUser, UserDto>();
+        CreateMap<IdentityUser, UserInListDto>();
 
     }
 }
