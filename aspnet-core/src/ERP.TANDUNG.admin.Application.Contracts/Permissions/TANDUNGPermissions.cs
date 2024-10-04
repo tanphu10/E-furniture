@@ -2,9 +2,9 @@
 
 public static class TANDUNGPermissions
 {
-    public const string GroupName = "TANDUNG";
-
     //Add your own permission names. Example:
+    public const string SystemGroupName = "AdminSystem";
+    public const string CatalogGroupName = "AdminCatalog";
     public static class Role
     {
         public const string Default = SystemGroupName + ".Role";

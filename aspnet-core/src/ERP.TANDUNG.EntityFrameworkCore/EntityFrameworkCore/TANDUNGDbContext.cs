@@ -6,6 +6,7 @@ using ERP.TANDUNG.Configurations.Orders;
 using ERP.TANDUNG.Configurations.ProductCategories;
 using ERP.TANDUNG.Configurations.Products;
 using ERP.TANDUNG.Configurations.Promotions;
+using ERP.TANDUNG.IdentitySettings;
 using ERP.TANDUNG.Inventories;
 using ERP.TANDUNG.InventoryTickets;
 using ERP.TANDUNG.Manufacturers;
@@ -92,6 +93,7 @@ public class TANDUNGDbContext :
     public DbSet<PromotionCategory> PromotionCategories { get; set; }
     public DbSet<PromotionManufacturer> PromotionManufacturers { get; set; }
     public DbSet<PromotionUsageHistory> PromotionUsageHistories { get; set; }
+    public DbSet<IdentitySetting> IdentitySettings { get; set; }
     #endregion
 
     public TANDUNGDbContext(DbContextOptions<TANDUNGDbContext> options)

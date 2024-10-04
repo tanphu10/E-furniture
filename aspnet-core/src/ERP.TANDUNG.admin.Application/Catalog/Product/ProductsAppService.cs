@@ -11,10 +11,9 @@ using Volo.Abp.Application.Services;
 using Volo.Abp.BlobStoring;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp;
-using ERP.TANDUNG.Admin.Catalog.Products;
 using ERP.TANDUNG.Admin.Catalog.Products.Attributes;
 
-namespace ERP.TANDUNG.Admin.Catalog.Product
+namespace ERP.TANDUNG.Admin.Catalog.Products
 {
     public class ProductsAppService : CrudAppService<
        Product,
@@ -75,7 +74,7 @@ namespace ERP.TANDUNG.Admin.Catalog.Product
                 input.Visibility,
                 input.IsActive,
                 input.CategoryId,
-            input.SeoMetaDescription,
+                input.SeoMetaDescription,
                 input.Description,
                 input.SellPrice);
 

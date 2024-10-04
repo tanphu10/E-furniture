@@ -1,6 +1,5 @@
-import { AttributeType } from '@proxy/erp/tandung/product-attributes/attribute-type.enum';
 import type { BaseListFilterDto } from '../../models';
-// import type { AttributeType } from '../../../product-attributes/attribute-type.enum';
+import type { AttributeType } from '../../../product-attributes/attribute-type.enum';
 // import type { AttributeType } from '../../../product-attributes/models';
 
 export interface AddUpdateProductAttributeDto {

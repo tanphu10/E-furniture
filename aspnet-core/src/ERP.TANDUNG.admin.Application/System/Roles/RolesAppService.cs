@@ -1,7 +1,4 @@
-﻿using ERP.TANDUNG.Admin.ProductCategories;
-using ERP.TANDUNG.Admin.Products;
-using ERP.TANDUNG.Products;
-using ERP.TANDUNG.Roles;
+﻿using ERP.TANDUNG.Roles;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using System;
@@ -15,9 +12,6 @@ using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Identity;
-using Volo.Abp.Localization;
-using Volo.Abp.MultiTenancy;
-using Volo.Abp.ObjectMapping;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SimpleStateChecking;
 

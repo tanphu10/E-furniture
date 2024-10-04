@@ -9,6 +9,6 @@ namespace ERP.TANDUNG.Admin
 {
     public class BaseListFilterDto:PagedResultRequestDto
     {
-        public string Keyword { get; set; }
+        public string? Keyword { get; set; }
     }
 }
