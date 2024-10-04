@@ -2,8 +2,7 @@
 
 public static class TANDUNGPermissions
 {
-    public const string SystemGroupName = "ErpAdminSystem";
-    public const string CatalogGroupName = "ErpAdminCatalog";
+    public const string GroupName = "TANDUNG";
 
     //Add your own permission names. Example:
     public static class Role
@@ -27,6 +26,22 @@ public static class TANDUNGPermissions
         public const string Update = Default + ".Update";
         public const string Delete = Default + ".Delete";
         public const string AttributeManage = Default + ".Attribute";
+    } 
+    public static class Manufacturer
+    {
+        public const string Default = CatalogGroupName + ".Manufacturer";
+        public const string Create = Default + ".Create";
+        public const string Update = Default + ".Update";
+        public const string Delete = Default + ".Delete";
+        public const string AttributeManage = Default + ".Attribute";
+    }
+    public static class ProductCategory
+    {
+        public const string Default = CatalogGroupName + ".ProductCategory";
+        public const string Create = Default + ".Create";
+        public const string Update = Default + ".Update";
+        public const string Delete = Default + ".Delete";
+        public const string AttributeManage = Default + ".Attribute";
     }
     public static class Attribute
     {
@@ -36,4 +51,5 @@ public static class TANDUNGPermissions
         public const string Delete = Default + ".Delete";
     }  
     
+    //public const string MyPermission1 = GroupName + ".MyPermission1";
 }
