@@ -14,14 +14,14 @@ import { AppComponent } from './app.component';
 import { APP_ROUTE_PROVIDER } from './route.provider';
 import { FeatureManagementModule } from '@abp/ng.feature-management';
 import { AbpOAuthModule } from '@abp/ng.oauth';
-import { ThemeLeptonXModule } from '@abp/ng.theme.lepton-x';
-import { SideMenuLayoutModule } from '@abp/ng.theme.lepton-x/layouts';
 import { AccountLayoutModule } from '@abp/ng.theme.lepton-x/account';
+import {AppLayoutModule} from './layout/app.layout.module'
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    AppLayoutModule,
     CoreModule.forRoot({
       environment,
       registerLocaleFn: registerLocale(),
@@ -37,8 +37,8 @@ import { AccountLayoutModule } from '@abp/ng.theme.lepton-x/account';
     
     FeatureManagementModule.forRoot(),
     InternetConnectionStatusComponent,
-    ThemeLeptonXModule.forRoot(),
-    SideMenuLayoutModule.forRoot(),
+    // ThemeLeptonXModule.forRoot(),
+    // SideMenuLayoutModule.forRoot(),
     AccountLayoutModule.forRoot()
   ],
   declarations: [AppComponent],

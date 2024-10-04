@@ -12,15 +12,16 @@ export const environment = {
   oAuthConfig: {
     issuer: 'https://localhost:5000/',
     redirectUri: baseUrl,
-    clientId: 'TANDUNG_admin',
+    clientId: 'TANDUNG_Admin',
     responseType: 'code',
     scope: 'offline_access TANDUNG.Admin',
     requireHttps: true,
+    dummyClientSecret:'abcd*123'
   },
   apis: {
     default: {
       url: 'https://localhost:5001',
-      rootNamespace: 'ERP.TANDUNG.Admin',
+      rootNamespace: 'TANDUNG.Admin',
     },
   },
 } as Environment;
