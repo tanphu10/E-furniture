@@ -2,7 +2,7 @@
   <!-- filter -->
   <div class="grid">
     <div class="col-4">
-      <button pButton label="Add New" severity="contrast" iconPos="left" icon="fa fa-plus"></button>
+      <button pButton label="Add New" (click)="showAddModel()" severity="contrast" iconPos="left" icon="fa fa-plus"></button>
     </div>
     <div class="col-8">
       <div class="formgroup-inline">
@@ -56,7 +56,7 @@
     [rowsPerPageOptions]="[10, 20, 30]"> </p-paginator>
   <!-- block UI -->
   <p-blockUI [target]="pnl" [blocked]="blockedPanel">
-    <i class="pi pi-lock" style="font-size: 3rem"></i>
+    <p-progressSpinner> </p-progressSpinner>
   </p-blockUI>
 
 

@@ -773,499 +773,16 @@
       "rootPath": "app",
       "remoteServiceName": "Default",
       "controllers": {
-        "ERP.TANDUNG.Admin.ProductAttributesAppService.ProductAttributesAppService": {
-          "controllerName": "ProductAttributes",
-          "controllerGroupName": "ProductAttributes",
-          "isRemoteService": true,
-          "isIntegrationService": false,
-          "apiVersion": null,
-          "type": "ERP.TANDUNG.Admin.ProductAttributesAppService.ProductAttributesAppService",
-          "interfaces": [
-            {
-              "type": "ERP.TANDUNG.Admin.ProductAttributes.IProductAttributesAppService",
-              "name": "IProductAttributesAppService",
-              "methods": [
-                {
-                  "name": "GetListFilterAsync",
-                  "parametersOnMethod": [
-                    {
-                      "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.BaseListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.BaseListFilterDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.BaseListFilterDto",
-                      "isOptional": false,
-                      "defaultValue": null
-                    }
-                  ],
-                  "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto>"
-                  }
-                },
-                {
-                  "name": "GetListAllAsync",
-                  "parametersOnMethod": [],
-                  "returnValue": {
-                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto>",
-                    "typeSimple": "[ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto]"
-                  }
-                },
-                {
-                  "name": "DeleteMultipleAsync",
-                  "parametersOnMethod": [
-                    {
-                      "name": "ids",
-                      "typeAsString": "System.Collections.Generic.IEnumerable`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
-                      "type": "System.Collections.Generic.IEnumerable<System.Guid>",
-                      "typeSimple": "[string]",
-                      "isOptional": false,
-                      "defaultValue": null
-                    }
-                  ],
-                  "returnValue": {
-                    "type": "System.Void",
-                    "typeSimple": "System.Void"
-                  }
-                },
-                {
-                  "name": "GetAsync",
-                  "parametersOnMethod": [
-                    {
-                      "name": "id",
-                      "typeAsString": "System.Guid, System.Private.CoreLib",
-                      "type": "System.Guid",
-                      "typeSimple": "string",
-                      "isOptional": false,
-                      "defaultValue": null
-                    }
-                  ],
-                  "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto"
-                  }
-                },
-                {
-                  "name": "GetListAsync",
-                  "parametersOnMethod": [
-                    {
-                      "name": "input",
-                      "typeAsString": "Volo.Abp.Application.Dtos.PagedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
-                      "type": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
-                      "typeSimple": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
-                      "isOptional": false,
-                      "defaultValue": null
-                    }
-                  ],
-                  "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto>"
-                  }
-                },
-                {
-                  "name": "CreateAsync",
-                  "parametersOnMethod": [
-                    {
-                      "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                      "isOptional": false,
-                      "defaultValue": null
-                    }
-                  ],
-                  "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto"
-                  }
-                },
-                {
-                  "name": "UpdateAsync",
-                  "parametersOnMethod": [
-                    {
-                      "name": "id",
-                      "typeAsString": "System.Guid, System.Private.CoreLib",
-                      "type": "System.Guid",
-                      "typeSimple": "string",
-                      "isOptional": false,
-                      "defaultValue": null
-                    },
-                    {
-                      "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                      "isOptional": false,
-                      "defaultValue": null
-                    }
-                  ],
-                  "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto"
-                  }
-                },
-                {
-                  "name": "DeleteAsync",
-                  "parametersOnMethod": [
-                    {
-                      "name": "id",
-                      "typeAsString": "System.Guid, System.Private.CoreLib",
-                      "type": "System.Guid",
-                      "typeSimple": "string",
-                      "isOptional": false,
-                      "defaultValue": null
-                    }
-                  ],
-                  "returnValue": {
-                    "type": "System.Void",
-                    "typeSimple": "System.Void"
-                  }
-                }
-              ]
-            }
-          ],
-          "actions": {
-            "DeleteMultipleAsyncByIds": {
-              "uniqueName": "DeleteMultipleAsyncByIds",
-              "name": "DeleteMultipleAsync",
-              "httpMethod": "DELETE",
-              "url": "api/app/product-attributes/multiple",
-              "supportedVersions": [],
-              "parametersOnMethod": [
-                {
-                  "name": "ids",
-                  "typeAsString": "System.Collections.Generic.IEnumerable`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
-                  "type": "System.Collections.Generic.IEnumerable<System.Guid>",
-                  "typeSimple": "[string]",
-                  "isOptional": false,
-                  "defaultValue": null
-                }
-              ],
-              "parameters": [
-                {
-                  "nameOnMethod": "ids",
-                  "name": "ids",
-                  "jsonName": null,
-                  "type": "System.Collections.Generic.IEnumerable<System.Guid>",
-                  "typeSimple": "[string]",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "ModelBinding",
-                  "descriptorName": ""
-                }
-              ],
-              "returnValue": {
-                "type": "System.Void",
-                "typeSimple": "System.Void"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductAttributes.IProductAttributesAppService"
-            },
-            "GetListAllAsync": {
-              "uniqueName": "GetListAllAsync",
-              "name": "GetListAllAsync",
-              "httpMethod": "GET",
-              "url": "api/app/product-attributes/all",
-              "supportedVersions": [],
-              "parametersOnMethod": [],
-              "parameters": [],
-              "returnValue": {
-                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto>",
-                "typeSimple": "[ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto]"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductAttributes.IProductAttributesAppService"
-            },
-            "GetListFilterAsyncByInput": {
-              "uniqueName": "GetListFilterAsyncByInput",
-              "name": "GetListFilterAsync",
-              "httpMethod": "GET",
-              "url": "api/app/product-attributes/filter",
-              "supportedVersions": [],
-              "parametersOnMethod": [
-                {
-                  "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.BaseListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.BaseListFilterDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.BaseListFilterDto",
-                  "isOptional": false,
-                  "defaultValue": null
-                }
-              ],
-              "parameters": [
-                {
-                  "nameOnMethod": "input",
-                  "name": "Keyword",
-                  "jsonName": null,
-                  "type": "System.String",
-                  "typeSimple": "string",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "ModelBinding",
-                  "descriptorName": "input"
-                },
-                {
-                  "nameOnMethod": "input",
-                  "name": "SkipCount",
-                  "jsonName": null,
-                  "type": "System.Int32",
-                  "typeSimple": "number",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "ModelBinding",
-                  "descriptorName": "input"
-                },
-                {
-                  "nameOnMethod": "input",
-                  "name": "MaxResultCount",
-                  "jsonName": null,
-                  "type": "System.Int32",
-                  "typeSimple": "number",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "ModelBinding",
-                  "descriptorName": "input"
-                }
-              ],
-              "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto>"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductAttributes.IProductAttributesAppService"
-            },
-            "CreateAsyncByInput": {
-              "uniqueName": "CreateAsyncByInput",
-              "name": "CreateAsync",
-              "httpMethod": "POST",
-              "url": "api/app/product-attributes",
-              "supportedVersions": [],
-              "parametersOnMethod": [
-                {
-                  "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "isOptional": false,
-                  "defaultValue": null
-                }
-              ],
-              "parameters": [
-                {
-                  "nameOnMethod": "input",
-                  "name": "input",
-                  "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "Body",
-                  "descriptorName": ""
-                }
-              ],
-              "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto>"
-            },
-            "UpdateAsyncByIdAndInput": {
-              "uniqueName": "UpdateAsyncByIdAndInput",
-              "name": "UpdateAsync",
-              "httpMethod": "PUT",
-              "url": "api/app/product-attributes/{id}",
-              "supportedVersions": [],
-              "parametersOnMethod": [
-                {
-                  "name": "id",
-                  "typeAsString": "System.Guid, System.Private.CoreLib",
-                  "type": "System.Guid",
-                  "typeSimple": "string",
-                  "isOptional": false,
-                  "defaultValue": null
-                },
-                {
-                  "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "isOptional": false,
-                  "defaultValue": null
-                }
-              ],
-              "parameters": [
-                {
-                  "nameOnMethod": "id",
-                  "name": "id",
-                  "jsonName": null,
-                  "type": "System.Guid",
-                  "typeSimple": "string",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": [],
-                  "bindingSourceId": "Path",
-                  "descriptorName": ""
-                },
-                {
-                  "nameOnMethod": "input",
-                  "name": "input",
-                  "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "Body",
-                  "descriptorName": ""
-                }
-              ],
-              "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto,System.Guid,ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto>"
-            },
-            "DeleteAsyncById": {
-              "uniqueName": "DeleteAsyncById",
-              "name": "DeleteAsync",
-              "httpMethod": "DELETE",
-              "url": "api/app/product-attributes/{id}",
-              "supportedVersions": [],
-              "parametersOnMethod": [
-                {
-                  "name": "id",
-                  "typeAsString": "System.Guid, System.Private.CoreLib",
-                  "type": "System.Guid",
-                  "typeSimple": "string",
-                  "isOptional": false,
-                  "defaultValue": null
-                }
-              ],
-              "parameters": [
-                {
-                  "nameOnMethod": "id",
-                  "name": "id",
-                  "jsonName": null,
-                  "type": "System.Guid",
-                  "typeSimple": "string",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": [],
-                  "bindingSourceId": "Path",
-                  "descriptorName": ""
-                }
-              ],
-              "returnValue": {
-                "type": "System.Void",
-                "typeSimple": "System.Void"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.Guid>"
-            },
-            "GetAsyncById": {
-              "uniqueName": "GetAsyncById",
-              "name": "GetAsync",
-              "httpMethod": "GET",
-              "url": "api/app/product-attributes/{id}",
-              "supportedVersions": [],
-              "parametersOnMethod": [
-                {
-                  "name": "id",
-                  "typeAsString": "System.Guid, System.Private.CoreLib",
-                  "type": "System.Guid",
-                  "typeSimple": "string",
-                  "isOptional": false,
-                  "defaultValue": null
-                }
-              ],
-              "parameters": [
-                {
-                  "nameOnMethod": "id",
-                  "name": "id",
-                  "jsonName": null,
-                  "type": "System.Guid",
-                  "typeSimple": "string",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": [],
-                  "bindingSourceId": "Path",
-                  "descriptorName": ""
-                }
-              ],
-              "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
-            },
-            "GetListAsyncByInput": {
-              "uniqueName": "GetListAsyncByInput",
-              "name": "GetListAsync",
-              "httpMethod": "GET",
-              "url": "api/app/product-attributes",
-              "supportedVersions": [],
-              "parametersOnMethod": [
-                {
-                  "name": "input",
-                  "typeAsString": "Volo.Abp.Application.Dtos.PagedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
-                  "type": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
-                  "typeSimple": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
-                  "isOptional": false,
-                  "defaultValue": null
-                }
-              ],
-              "parameters": [
-                {
-                  "nameOnMethod": "input",
-                  "name": "SkipCount",
-                  "jsonName": null,
-                  "type": "System.Int32",
-                  "typeSimple": "number",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "ModelBinding",
-                  "descriptorName": "input"
-                },
-                {
-                  "nameOnMethod": "input",
-                  "name": "MaxResultCount",
-                  "jsonName": null,
-                  "type": "System.Int32",
-                  "typeSimple": "number",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "constraintTypes": null,
-                  "bindingSourceId": "ModelBinding",
-                  "descriptorName": "input"
-                }
-              ],
-              "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto>"
-              },
-              "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
-            }
-          }
-        },
-        "ERP.TANDUNG.Admin.ProductCategoriesAppService.ManufacturersAppService": {
+        "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturersAppService": {
           "controllerName": "Manufacturers",
           "controllerGroupName": "Manufacturers",
           "isRemoteService": true,
           "isIntegrationService": false,
           "apiVersion": null,
-          "type": "ERP.TANDUNG.Admin.ProductCategoriesAppService.ManufacturersAppService",
+          "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturersAppService",
           "interfaces": [
             {
-              "type": "ERP.TANDUNG.Admin.ProductCategories.IManufacturersAppService",
+              "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.IManufacturersAppService",
               "name": "IManufacturersAppService",
               "methods": [
                 {
@@ -1281,16 +798,16 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>"
                   }
                 },
                 {
                   "name": "GetListAllAsync",
                   "parametersOnMethod": [],
                   "returnValue": {
-                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto>",
-                    "typeSimple": "[ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto]"
+                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>",
+                    "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto]"
                   }
                 },
                 {
@@ -1323,8 +840,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
                   }
                 },
                 {
@@ -1340,8 +857,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto>"
                   }
                 },
                 {
@@ -1349,16 +866,16 @@
                   "parametersOnMethod": [
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
                   }
                 },
                 {
@@ -1374,16 +891,16 @@
                     },
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
                   }
                 },
                 {
@@ -1442,7 +959,7 @@
                 "typeSimple": "System.Void"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductCategories.IManufacturersAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Manufacturers.IManufacturersAppService"
             },
             "GetListAllAsync": {
               "uniqueName": "GetListAllAsync",
@@ -1453,11 +970,11 @@
               "parametersOnMethod": [],
               "parameters": [],
               "returnValue": {
-                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto>",
-                "typeSimple": "[ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto]"
+                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>",
+                "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto]"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductCategories.IManufacturersAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Manufacturers.IManufacturersAppService"
             },
             "GetListFilterAsyncByInput": {
               "uniqueName": "GetListFilterAsyncByInput",
@@ -1514,11 +1031,11 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductCategories.IManufacturersAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Manufacturers.IManufacturersAppService"
             },
             "CreateAsyncByInput": {
               "uniqueName": "CreateAsyncByInput",
@@ -1529,9 +1046,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -1541,8 +1058,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -1551,11 +1068,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto,ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto>"
+              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto>"
             },
             "UpdateAsyncByIdAndInput": {
               "uniqueName": "UpdateAsyncByIdAndInput",
@@ -1574,9 +1091,9 @@
                 },
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -1598,8 +1115,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -1608,11 +1125,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto,System.Guid,ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,System.Guid,ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto>"
             },
             "DeleteAsyncById": {
               "uniqueName": "DeleteAsyncById",
@@ -1682,11 +1199,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto,ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
               "uniqueName": "GetListAsyncByInput",
@@ -1731,25 +1248,25 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto,ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
         },
-        "ERP.TANDUNG.Admin.ProductCategoriesAppService.ProductCategoriesAppService": {
-          "controllerName": "ProductCategories",
-          "controllerGroupName": "ProductCategories",
+        "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributesAppService": {
+          "controllerName": "ProductAttributes",
+          "controllerGroupName": "ProductAttributes",
           "isRemoteService": true,
           "isIntegrationService": false,
           "apiVersion": null,
-          "type": "ERP.TANDUNG.Admin.ProductCategoriesAppService.ProductCategoriesAppService",
+          "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributesAppService",
           "interfaces": [
             {
-              "type": "ERP.TANDUNG.Admin.ProductCategories.IProductCategoriesAppService",
-              "name": "IProductCategoriesAppService",
+              "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.IProductAttributesAppService",
+              "name": "IProductAttributesAppService",
               "methods": [
                 {
                   "name": "GetListFilterAsync",
@@ -1764,16 +1281,16 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>"
                   }
                 },
                 {
                   "name": "GetListAllAsync",
                   "parametersOnMethod": [],
                   "returnValue": {
-                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto>",
-                    "typeSimple": "[ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto]"
+                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>",
+                    "typeSimple": "[ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto]"
                   }
                 },
                 {
@@ -1806,8 +1323,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
                   }
                 },
                 {
@@ -1823,8 +1340,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto>"
                   }
                 },
                 {
@@ -1832,16 +1349,16 @@
                   "parametersOnMethod": [
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
                   }
                 },
                 {
@@ -1857,16 +1374,499 @@
                     },
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "DeleteMultipleAsyncByIds": {
+              "uniqueName": "DeleteMultipleAsyncByIds",
+              "name": "DeleteMultipleAsync",
+              "httpMethod": "DELETE",
+              "url": "api/app/product-attributes/multiple",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "ids",
+                  "typeAsString": "System.Collections.Generic.IEnumerable`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                  "type": "System.Collections.Generic.IEnumerable<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "ids",
+                  "name": "ids",
+                  "jsonName": null,
+                  "type": "System.Collections.Generic.IEnumerable<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.IProductAttributesAppService"
+            },
+            "GetListAllAsync": {
+              "uniqueName": "GetListAllAsync",
+              "name": "GetListAllAsync",
+              "httpMethod": "GET",
+              "url": "api/app/product-attributes/all",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>",
+                "typeSimple": "[ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.IProductAttributesAppService"
+            },
+            "GetListFilterAsyncByInput": {
+              "uniqueName": "GetListFilterAsyncByInput",
+              "name": "GetListFilterAsync",
+              "httpMethod": "GET",
+              "url": "api/app/product-attributes/filter",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "ERP.TANDUNG.Admin.BaseListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Keyword",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.IProductAttributesAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/app/product-attributes",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto>"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/app/product-attributes/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,System.Guid,ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto>"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/app/product-attributes/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.Guid>"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/app/product-attributes/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+            },
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/app/product-attributes",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "Volo.Abp.Application.Dtos.PagedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
+                  "type": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                  "typeSimple": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+            }
+          }
+        },
+        "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoriesAppService": {
+          "controllerName": "ProductCategories",
+          "controllerGroupName": "ProductCategories",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoriesAppService",
+          "interfaces": [
+            {
+              "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.IProductCategoriesAppService",
+              "name": "IProductCategoriesAppService",
+              "methods": [
+                {
+                  "name": "GetListFilterAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "ERP.TANDUNG.Admin.BaseListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>"
+                  }
+                },
+                {
+                  "name": "GetListAllAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>",
+                    "typeSimple": "[ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto]"
+                  }
+                },
+                {
+                  "name": "DeleteMultipleAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "ids",
+                      "typeAsString": "System.Collections.Generic.IEnumerable`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                      "type": "System.Collections.Generic.IEnumerable<System.Guid>",
+                      "typeSimple": "[string]",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
+                  }
+                },
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "Volo.Abp.Application.Dtos.PagedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
+                      "type": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                      "typeSimple": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto>"
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
                   }
                 },
                 {
@@ -1925,7 +1925,7 @@
                 "typeSimple": "System.Void"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductCategories.IProductCategoriesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductCategories.IProductCategoriesAppService"
             },
             "GetListAllAsync": {
               "uniqueName": "GetListAllAsync",
@@ -1936,11 +1936,11 @@
               "parametersOnMethod": [],
               "parameters": [],
               "returnValue": {
-                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto>",
-                "typeSimple": "[ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto]"
+                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>",
+                "typeSimple": "[ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto]"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductCategories.IProductCategoriesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductCategories.IProductCategoriesAppService"
             },
             "GetListFilterAsyncByInput": {
               "uniqueName": "GetListFilterAsyncByInput",
@@ -1997,11 +1997,11 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.ProductCategories.IProductCategoriesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductCategories.IProductCategoriesAppService"
             },
             "CreateAsyncByInput": {
               "uniqueName": "CreateAsyncByInput",
@@ -2012,9 +2012,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2024,8 +2024,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -2034,11 +2034,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto>"
+              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto>"
             },
             "UpdateAsyncByIdAndInput": {
               "uniqueName": "UpdateAsyncByIdAndInput",
@@ -2057,9 +2057,9 @@
                 },
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2081,8 +2081,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -2091,11 +2091,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto,System.Guid,ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,System.Guid,ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto>"
             },
             "DeleteAsyncById": {
               "uniqueName": "DeleteAsyncById",
@@ -2165,11 +2165,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto",
-                "typeSimple": "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
               "uniqueName": "GetListAsyncByInput",
@@ -2214,24 +2214,24 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
         },
-        "ERP.TANDUNG.Admin.Products.ProductsAppService": {
+        "ERP.TANDUNG.Admin.Catalog.Products.ProductsAppService": {
           "controllerName": "Products",
           "controllerGroupName": "Products",
           "isRemoteService": true,
           "isIntegrationService": false,
           "apiVersion": null,
-          "type": "ERP.TANDUNG.Admin.Products.ProductsAppService",
+          "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductsAppService",
           "interfaces": [
             {
-              "type": "ERP.TANDUNG.Admin.Products.IProductsAppService",
+              "type": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService",
               "name": "IProductsAppService",
               "methods": [
                 {
@@ -2239,24 +2239,24 @@
                   "parametersOnMethod": [
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.Products.ProductListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.Products.ProductListFilterDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.Products.ProductListFilterDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.ProductListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductListFilterDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductListFilterDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductInListDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductInListDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>"
                   }
                 },
                 {
                   "name": "GetListAllAsync",
                   "parametersOnMethod": [],
                   "returnValue": {
-                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Products.ProductInListDto>",
-                    "typeSimple": "[ERP.TANDUNG.Admin.Products.ProductInListDto]"
+                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>",
+                    "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto]"
                   }
                 },
                 {
@@ -2306,16 +2306,16 @@
                   "parametersOnMethod": [
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto"
                   }
                 },
                 {
@@ -2331,16 +2331,16 @@
                     },
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto"
                   }
                 },
                 {
@@ -2381,8 +2381,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto>",
-                    "typeSimple": "[ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto]"
+                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto>",
+                    "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto]"
                   }
                 },
                 {
@@ -2398,8 +2398,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Products.ProductDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Products.ProductDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
                   }
                 },
                 {
@@ -2415,8 +2415,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductDto>"
                   }
                 },
                 {
@@ -2424,16 +2424,16 @@
                   "parametersOnMethod": [
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Products.ProductDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Products.ProductDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
                   }
                 },
                 {
@@ -2449,16 +2449,16 @@
                     },
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Products.ProductDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Products.ProductDto"
+                    "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
                   }
                 },
                 {
@@ -2491,9 +2491,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2503,8 +2503,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -2513,11 +2513,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Products.ProductDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Products.ProductDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Products.ProductDto,ERP.TANDUNG.Admin.Products.CreateUpdateProductDto>"
+              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto>"
             },
             "UpdateAsyncByIdAndInput": {
               "uniqueName": "UpdateAsyncByIdAndInput",
@@ -2536,9 +2536,9 @@
                 },
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2560,8 +2560,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -2570,11 +2570,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Products.ProductDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Products.ProductDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Products.ProductDto,System.Guid,ERP.TANDUNG.Admin.Products.CreateUpdateProductDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,System.Guid,ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto>"
             },
             "DeleteMultipleAsyncByIds": {
               "uniqueName": "DeleteMultipleAsyncByIds",
@@ -2611,7 +2611,7 @@
                 "typeSimple": "System.Void"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListAllAsync": {
               "uniqueName": "GetListAllAsync",
@@ -2622,11 +2622,11 @@
               "parametersOnMethod": [],
               "parameters": [],
               "returnValue": {
-                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Products.ProductInListDto>",
-                "typeSimple": "[ERP.TANDUNG.Admin.Products.ProductInListDto]"
+                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>",
+                "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto]"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListFilterAsyncByInput": {
               "uniqueName": "GetListFilterAsyncByInput",
@@ -2637,9 +2637,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Products.ProductListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Products.ProductListFilterDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.ProductListFilterDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.ProductListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductListFilterDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductListFilterDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2695,11 +2695,11 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductInListDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductInListDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetThumbnailImageAsyncByFileName": {
               "uniqueName": "GetThumbnailImageAsyncByFileName",
@@ -2736,7 +2736,7 @@
                 "typeSimple": "string"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetSuggestNewCodeAsync": {
               "uniqueName": "GetSuggestNewCodeAsync",
@@ -2751,7 +2751,7 @@
                 "typeSimple": "string"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "AddProductAttributeAsyncByInput": {
               "uniqueName": "AddProductAttributeAsyncByInput",
@@ -2762,9 +2762,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2774,8 +2774,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -2784,11 +2784,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "RemoveProductAttributeAsyncByAttributeIdAndId": {
               "uniqueName": "RemoveProductAttributeAsyncByAttributeIdAndId",
@@ -2845,7 +2845,7 @@
                 "typeSimple": "System.Void"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListProductAttributeAllAsyncByProductId": {
               "uniqueName": "GetListProductAttributeAllAsyncByProductId",
@@ -2878,11 +2878,11 @@
                 }
               ],
               "returnValue": {
-                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto>",
-                "typeSimple": "[ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto]"
+                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto>",
+                "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto]"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListProductAttributesAsyncByInput": {
               "uniqueName": "GetListProductAttributesAsyncByInput",
@@ -2893,9 +2893,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeListFilterDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeListFilterDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeListFilterDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeListFilterDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2951,11 +2951,11 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.ProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.ProductsAppService"
             },
             "UpdateProductAttributeAsyncByIdAndInput": {
               "uniqueName": "UpdateProductAttributeAsyncByIdAndInput",
@@ -2974,9 +2974,9 @@
                 },
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -2998,8 +2998,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto",
+                  "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -3008,11 +3008,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Products.IProductsAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "DeleteAsyncById": {
               "uniqueName": "DeleteAsyncById",
@@ -3082,11 +3082,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Products.ProductDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Products.ProductDto"
+                "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
+                "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Products.ProductDto,ERP.TANDUNG.Admin.Products.ProductDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,ERP.TANDUNG.Admin.Catalog.Products.ProductDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
               "uniqueName": "GetListAsyncByInput",
@@ -3131,24 +3131,24 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Products.ProductDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Products.ProductDto,ERP.TANDUNG.Admin.Products.ProductDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,ERP.TANDUNG.Admin.Catalog.Products.ProductDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
         },
-        "ERP.TANDUNG.Admin.Roles.RolesAppService": {
+        "ERP.TANDUNG.Admin.System.Roles.RolesAppService": {
           "controllerName": "Roles",
           "controllerGroupName": "Roles",
           "isRemoteService": true,
           "isIntegrationService": false,
           "apiVersion": null,
-          "type": "ERP.TANDUNG.Admin.Roles.RolesAppService",
+          "type": "ERP.TANDUNG.Admin.System.Roles.RolesAppService",
           "interfaces": [
             {
-              "type": "ERP.TANDUNG.Admin.Roles.IRolesAppService",
+              "type": "ERP.TANDUNG.Admin.System.Roles.IRolesAppService",
               "name": "IRolesAppService",
               "methods": [
                 {
@@ -3164,16 +3164,16 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleInListDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleInListDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleInListDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleInListDto>"
                   }
                 },
                 {
                   "name": "GetListAllAsync",
                   "parametersOnMethod": [],
                   "returnValue": {
-                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Roles.RoleInListDto>",
-                    "typeSimple": "[ERP.TANDUNG.Admin.Roles.RoleInListDto]"
+                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.System.Roles.RoleInListDto>",
+                    "typeSimple": "[ERP.TANDUNG.Admin.System.Roles.RoleInListDto]"
                   }
                 },
                 {
@@ -3264,8 +3264,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Roles.RoleDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Roles.RoleDto"
+                    "type": "ERP.TANDUNG.Admin.System.Roles.RoleDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.System.Roles.RoleDto"
                   }
                 },
                 {
@@ -3281,8 +3281,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleDto>",
-                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleDto>"
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleDto>"
                   }
                 },
                 {
@@ -3290,16 +3290,16 @@
                   "parametersOnMethod": [
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Roles.RoleDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Roles.RoleDto"
+                    "type": "ERP.TANDUNG.Admin.System.Roles.RoleDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.System.Roles.RoleDto"
                   }
                 },
                 {
@@ -3315,16 +3315,16 @@
                     },
                     {
                       "name": "input",
-                      "typeAsString": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
-                      "type": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
-                      "typeSimple": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
+                      "typeAsString": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
                       "isOptional": false,
                       "defaultValue": null
                     }
                   ],
                   "returnValue": {
-                    "type": "ERP.TANDUNG.Admin.Roles.RoleDto",
-                    "typeSimple": "ERP.TANDUNG.Admin.Roles.RoleDto"
+                    "type": "ERP.TANDUNG.Admin.System.Roles.RoleDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.System.Roles.RoleDto"
                   }
                 },
                 {
@@ -3403,7 +3403,7 @@
                 "typeSimple": "Volo.Abp.PermissionManagement.GetPermissionListResultDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Roles.IRolesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.System.Roles.IRolesAppService"
             },
             "UpdatePermissionAsyncByProviderNameAndProviderKeyAndInput": {
               "uniqueName": "UpdatePermissionAsyncByProviderNameAndProviderKeyAndInput",
@@ -3480,7 +3480,7 @@
                 "typeSimple": "System.Void"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Roles.IRolesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.System.Roles.IRolesAppService"
             },
             "CreateAsyncByInput": {
               "uniqueName": "CreateAsyncByInput",
@@ -3491,9 +3491,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -3503,8 +3503,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
+                  "type": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -3513,11 +3513,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Roles.RoleDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Roles.RoleDto"
+                "type": "ERP.TANDUNG.Admin.System.Roles.RoleDto",
+                "typeSimple": "ERP.TANDUNG.Admin.System.Roles.RoleDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Roles.RoleDto,ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto>"
+              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.System.Roles.RoleDto,ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto>"
             },
             "UpdateAsyncByIdAndInput": {
               "uniqueName": "UpdateAsyncByIdAndInput",
@@ -3536,9 +3536,9 @@
                 },
                 {
                   "name": "input",
-                  "typeAsString": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
-                  "type": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
+                  "typeAsString": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -3560,8 +3560,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
-                  "typeSimple": "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto",
+                  "type": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -3570,11 +3570,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Roles.RoleDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Roles.RoleDto"
+                "type": "ERP.TANDUNG.Admin.System.Roles.RoleDto",
+                "typeSimple": "ERP.TANDUNG.Admin.System.Roles.RoleDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Roles.RoleDto,System.Guid,ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.System.Roles.RoleDto,System.Guid,ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto>"
             },
             "DeleteMultipleAsyncByIds": {
               "uniqueName": "DeleteMultipleAsyncByIds",
@@ -3611,7 +3611,7 @@
                 "typeSimple": "System.Void"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Roles.IRolesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.System.Roles.IRolesAppService"
             },
             "GetListAllAsync": {
               "uniqueName": "GetListAllAsync",
@@ -3622,11 +3622,11 @@
               "parametersOnMethod": [],
               "parameters": [],
               "returnValue": {
-                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Roles.RoleInListDto>",
-                "typeSimple": "[ERP.TANDUNG.Admin.Roles.RoleInListDto]"
+                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.System.Roles.RoleInListDto>",
+                "typeSimple": "[ERP.TANDUNG.Admin.System.Roles.RoleInListDto]"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Roles.IRolesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.System.Roles.IRolesAppService"
             },
             "GetListFilterAsyncByInput": {
               "uniqueName": "GetListFilterAsyncByInput",
@@ -3683,11 +3683,11 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleInListDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleInListDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleInListDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleInListDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "ERP.TANDUNG.Admin.Roles.IRolesAppService"
+              "implementFrom": "ERP.TANDUNG.Admin.System.Roles.IRolesAppService"
             },
             "DeleteAsyncById": {
               "uniqueName": "DeleteAsyncById",
@@ -3757,11 +3757,11 @@
                 }
               ],
               "returnValue": {
-                "type": "ERP.TANDUNG.Admin.Roles.RoleDto",
-                "typeSimple": "ERP.TANDUNG.Admin.Roles.RoleDto"
+                "type": "ERP.TANDUNG.Admin.System.Roles.RoleDto",
+                "typeSimple": "ERP.TANDUNG.Admin.System.Roles.RoleDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Roles.RoleDto,ERP.TANDUNG.Admin.Roles.RoleDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.System.Roles.RoleDto,ERP.TANDUNG.Admin.System.Roles.RoleDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
               "uniqueName": "GetListAsyncByInput",
@@ -3806,11 +3806,525 @@
                 }
               ],
               "returnValue": {
-                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleDto>",
-                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Roles.RoleDto>"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Roles.RoleDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Roles.RoleDto,ERP.TANDUNG.Admin.Roles.RoleDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.System.Roles.RoleDto,ERP.TANDUNG.Admin.System.Roles.RoleDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+            }
+          }
+        },
+        "ERP.TANDUNG.Admin.System.Users.UsersAppService": {
+          "controllerName": "Users",
+          "controllerGroupName": "Users",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "ERP.TANDUNG.Admin.System.Users.UsersAppService",
+          "interfaces": [
+            {
+              "type": "ERP.TANDUNG.Admin.System.Users.IUsersAppService",
+              "name": "IUsersAppService",
+              "methods": [
+                {
+                  "name": "DeleteMultipleAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "ids",
+                      "typeAsString": "System.Collections.Generic.IEnumerable`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                      "type": "System.Collections.Generic.IEnumerable<System.Guid>",
+                      "typeSimple": "[string]",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "GetListAllAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "filterKeyword",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.System.Users.UserInListDto>",
+                    "typeSimple": "[ERP.TANDUNG.Admin.System.Users.UserInListDto]"
+                  }
+                },
+                {
+                  "name": "GetListFilterAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "ERP.TANDUNG.Admin.BaseListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserInListDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserInListDto>"
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ERP.TANDUNG.Admin.System.Users.UserDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.System.Users.UserDto"
+                  }
+                },
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "Volo.Abp.Application.Dtos.PagedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
+                      "type": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                      "typeSimple": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserDto>"
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "ERP.TANDUNG.Admin.System.Users.CreateUserDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.System.Users.CreateUserDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.System.Users.CreateUserDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ERP.TANDUNG.Admin.System.Users.UserDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.System.Users.UserDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto, ERP.TANDUNG.admin.Application.Contracts",
+                      "type": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto",
+                      "typeSimple": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ERP.TANDUNG.Admin.System.Users.UserDto",
+                    "typeSimple": "ERP.TANDUNG.Admin.System.Users.UserDto"
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "DeleteMultipleAsyncByIds": {
+              "uniqueName": "DeleteMultipleAsyncByIds",
+              "name": "DeleteMultipleAsync",
+              "httpMethod": "DELETE",
+              "url": "api/app/users/multiple",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "ids",
+                  "typeAsString": "System.Collections.Generic.IEnumerable`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                  "type": "System.Collections.Generic.IEnumerable<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "ids",
+                  "name": "ids",
+                  "jsonName": null,
+                  "type": "System.Collections.Generic.IEnumerable<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ERP.TANDUNG.Admin.System.Users.IUsersAppService"
+            },
+            "GetListAllAsyncByFilterKeyword": {
+              "uniqueName": "GetListAllAsyncByFilterKeyword",
+              "name": "GetListAllAsync",
+              "httpMethod": "GET",
+              "url": "api/app/users/all",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "filterKeyword",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "filterKeyword",
+                  "name": "filterKeyword",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.System.Users.UserInListDto>",
+                "typeSimple": "[ERP.TANDUNG.Admin.System.Users.UserInListDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ERP.TANDUNG.Admin.System.Users.IUsersAppService"
+            },
+            "GetListFilterAsyncByInput": {
+              "uniqueName": "GetListFilterAsyncByInput",
+              "name": "GetListFilterAsync",
+              "httpMethod": "GET",
+              "url": "api/app/users/filter",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "ERP.TANDUNG.Admin.BaseListFilterDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.BaseListFilterDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Keyword",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserInListDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserInListDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ERP.TANDUNG.Admin.System.Users.IUsersAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/app/users",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "ERP.TANDUNG.Admin.System.Users.CreateUserDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.System.Users.CreateUserDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Users.CreateUserDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "ERP.TANDUNG.Admin.System.Users.CreateUserDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Users.CreateUserDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ERP.TANDUNG.Admin.System.Users.UserDto",
+                "typeSimple": "ERP.TANDUNG.Admin.System.Users.UserDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.System.Users.UserDto,ERP.TANDUNG.Admin.System.Users.CreateUserDto>"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/app/users/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto, ERP.TANDUNG.admin.Application.Contracts",
+                  "type": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto",
+                  "typeSimple": "ERP.TANDUNG.Admin.System.Users.UpdateUserDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ERP.TANDUNG.Admin.System.Users.UserDto",
+                "typeSimple": "ERP.TANDUNG.Admin.System.Users.UserDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.System.Users.UserDto,System.Guid,ERP.TANDUNG.Admin.System.Users.UpdateUserDto>"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/app/users/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ERP.TANDUNG.Admin.System.Users.UserDto",
+                "typeSimple": "ERP.TANDUNG.Admin.System.Users.UserDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.System.Users.UserDto,ERP.TANDUNG.Admin.System.Users.UserDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/app/users/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.Guid>"
+            },
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/app/users",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "Volo.Abp.Application.Dtos.PagedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
+                  "type": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                  "typeSimple": "Volo.Abp.Application.Dtos.PagedResultRequestDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.System.Users.UserDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.System.Users.UserDto,ERP.TANDUNG.Admin.System.Users.UserDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
         }
@@ -6444,7 +6958,286 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.ProductAttributes.CreateUpdateProductAttributeDto": {
+    "ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto": {
+      "baseType": null,
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "Name",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Code",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Slug",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "CoverPicture",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Visibility",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "IsActive",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Country",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto": {
+      "baseType": null,
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "Id",
+          "jsonName": null,
+          "type": "System.Guid",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Name",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Code",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Slug",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "CoverPicture",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Visibility",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "IsActive",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Country",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto": {
+      "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "Name",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Code",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "CoverPicture",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Visibility",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "IsActive",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Country",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -6561,7 +7354,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeDto": {
+    "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -6690,7 +7483,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.ProductAttributes.ProductAttributeInListDto": {
+    "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto": {
       "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
       "isEnum": false,
       "enumNames": null,
@@ -6807,100 +7600,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateManufacturerDto": {
-      "baseType": null,
-      "isEnum": false,
-      "enumNames": null,
-      "enumValues": null,
-      "genericArguments": null,
-      "properties": [
-        {
-          "name": "Name",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Code",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Slug",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "CoverPicture",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Visibility",
-          "jsonName": null,
-          "type": "System.Boolean",
-          "typeSimple": "boolean",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "IsActive",
-          "jsonName": null,
-          "type": "System.Boolean",
-          "typeSimple": "boolean",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Country",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        }
-      ]
-    },
-    "ERP.TANDUNG.Admin.ProductCategories.CreateUpdateProductCategoryDto": {
+    "ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -7017,193 +7717,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.ProductCategories.ManufacturerDto": {
-      "baseType": null,
-      "isEnum": false,
-      "enumNames": null,
-      "enumValues": null,
-      "genericArguments": null,
-      "properties": [
-        {
-          "name": "Id",
-          "jsonName": null,
-          "type": "System.Guid",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Name",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Code",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Slug",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "CoverPicture",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Visibility",
-          "jsonName": null,
-          "type": "System.Boolean",
-          "typeSimple": "boolean",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "IsActive",
-          "jsonName": null,
-          "type": "System.Boolean",
-          "typeSimple": "boolean",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Country",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        }
-      ]
-    },
-    "ERP.TANDUNG.Admin.ProductCategories.ManufacturerInListDto": {
-      "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
-      "isEnum": false,
-      "enumNames": null,
-      "enumValues": null,
-      "genericArguments": null,
-      "properties": [
-        {
-          "name": "Name",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Code",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "CoverPicture",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Visibility",
-          "jsonName": null,
-          "type": "System.Boolean",
-          "typeSimple": "boolean",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "IsActive",
-          "jsonName": null,
-          "type": "System.Boolean",
-          "typeSimple": "boolean",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        },
-        {
-          "name": "Country",
-          "jsonName": null,
-          "type": "System.String",
-          "typeSimple": "string",
-          "isRequired": false,
-          "minLength": null,
-          "maxLength": null,
-          "minimum": null,
-          "maximum": null,
-          "regex": null
-        }
-      ]
-    },
-    "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryDto": {
+    "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -7332,7 +7846,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.ProductCategories.ProductCategoryInListDto": {
+    "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto": {
       "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
       "isEnum": false,
       "enumNames": null,
@@ -7413,7 +7927,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Products.Attributes.AddUpdateProductAttributeDto": {
+    "ERP.TANDUNG.Admin.Catalog.Products.Attributes.AddUpdateProductAttributeDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -7506,7 +8020,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeListFilterDto": {
+    "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeListFilterDto": {
       "baseType": "ERP.TANDUNG.Admin.BaseListFilterDto",
       "isEnum": false,
       "enumNames": null,
@@ -7527,7 +8041,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Products.Attributes.ProductAttributeValueDto": {
+    "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -7728,7 +8242,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Products.CreateUpdateProductDto": {
+    "ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -7917,7 +8431,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Products.ProductDto": {
+    "ERP.TANDUNG.Admin.Catalog.Products.ProductDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -8001,6 +8515,30 @@
           "jsonName": null,
           "type": "System.Int32",
           "typeSimple": "number",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "SellPrice",
+          "jsonName": null,
+          "type": "System.Double",
+          "typeSimple": "number",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Visibility",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
           "isRequired": false,
           "minLength": null,
           "maxLength": null,
@@ -8106,7 +8644,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Products.ProductInListDto": {
+    "ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto": {
       "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
       "isEnum": false,
       "enumNames": null,
@@ -8259,7 +8797,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Products.ProductListFilterDto": {
+    "ERP.TANDUNG.Admin.Catalog.Products.ProductListFilterDto": {
       "baseType": "ERP.TANDUNG.Admin.BaseListFilterDto",
       "isEnum": false,
       "enumNames": null,
@@ -8280,7 +8818,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Roles.CreateUpdateRoleDto": {
+    "ERP.TANDUNG.Admin.System.Roles.CreateUpdateRoleDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -8313,7 +8851,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Roles.RoleDto": {
+    "ERP.TANDUNG.Admin.System.Roles.RoleDto": {
       "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
       "isEnum": false,
       "enumNames": null,
@@ -8346,7 +8884,7 @@
         }
       ]
     },
-    "ERP.TANDUNG.Admin.Roles.RoleInListDto": {
+    "ERP.TANDUNG.Admin.System.Roles.RoleInListDto": {
       "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
       "isEnum": false,
       "enumNames": null,
@@ -8367,6 +8905,306 @@
         },
         {
           "name": "Description",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "ERP.TANDUNG.Admin.System.Users.CreateUserDto": {
+      "baseType": null,
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "Name",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "SurName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Email",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "UserName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "PhoneNumber",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Password",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "ERP.TANDUNG.Admin.System.Users.UpdateUserDto": {
+      "baseType": null,
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "Name",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Email",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "SurName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "PhoneNumber",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "ERP.TANDUNG.Admin.System.Users.UserDto": {
+      "baseType": "Volo.Abp.Application.Dtos.AuditedEntityDto<System.Guid>",
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "Name",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "UserName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Email",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "SurName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "PhoneNumber",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Roles",
+          "jsonName": null,
+          "type": "[System.String]",
+          "typeSimple": "[string]",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "IsActive",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "ERP.TANDUNG.Admin.System.Users.UserInListDto": {
+      "baseType": "Volo.Abp.Application.Dtos.AuditedEntityDto<System.Guid>",
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "Name",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "SurName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Email",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "UserName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "PhoneNumber",
           "jsonName": null,
           "type": "System.String",
           "typeSimple": "string",
@@ -8824,6 +9662,76 @@
           "type": "System.String",
           "typeSimple": "string",
           "isRequired": true,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "Volo.Abp.Application.Dtos.AuditedEntityDto<T0>": {
+      "baseType": "Volo.Abp.Application.Dtos.CreationAuditedEntityDto<TPrimaryKey>",
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": [
+        "TPrimaryKey"
+      ],
+      "properties": [
+        {
+          "name": "LastModificationTime",
+          "jsonName": null,
+          "type": "System.DateTime?",
+          "typeSimple": "string?",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "LastModifierId",
+          "jsonName": null,
+          "type": "System.Guid?",
+          "typeSimple": "string?",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
+    "Volo.Abp.Application.Dtos.CreationAuditedEntityDto<T0>": {
+      "baseType": "Volo.Abp.Application.Dtos.EntityDto<TPrimaryKey>",
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": [
+        "TPrimaryKey"
+      ],
+      "properties": [
+        {
+          "name": "CreationTime",
+          "jsonName": null,
+          "type": "System.DateTime",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "CreatorId",
+          "jsonName": null,
+          "type": "System.Guid?",
+          "typeSimple": "string?",
+          "isRequired": false,
           "minLength": null,
           "maxLength": null,
           "minimum": null,
