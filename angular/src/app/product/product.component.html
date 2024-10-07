@@ -2,7 +2,10 @@
   <!-- filter -->
   <div class="grid">
     <div class="col-4">
-      <button pButton label="Add New" (click)="showAddModel()" severity="contrast" iconPos="left" icon="fa fa-plus"></button>
+      <button pButton label="Add New" (click)="showAddModel()" iconPos="left" icon="fa fa-plus"></button>
+      <button pButton label="Update" (click)="showEditModel()" *ngIf="selectedItems.length==1" iconPos="left"
+        icon="fa fa-plus"></button>
+
     </div>
     <div class="col-8">
       <div class="formgroup-inline">
@@ -19,11 +22,16 @@
   </div>
 
   <!-- table -->
-  <p-table #pnl [value]="items" [tableStyle]="{ 'min-width': '50rem' }">
+  <p-table #pnl [value]="items" [(selection)]="selectedItems" selectionMode="multiple"
+    [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
-      <tr>
+      <tr [pselectableRow]="row">
+        <th style="width: 10px;">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
         <th>Code</th>
         <th>SKU</th>
+        <th>Slug</th>
         <th>Name</th>
         <th>Type</th>
         <th>Category</th>
@@ -34,14 +42,24 @@
     </ng-template>
     <ng-template pTemplate="body" let-row>
       <tr>
+        <td style="width: 10px;">
+          <span class="ui-column-title"></span>
+          <p-tableHeaderCheckbox [value]="row"></p-tableHeaderCheckbox>
+        </td>
         <td>{{ row.code }}</td>
         <td>{{ row.sku }}</td>
+        <td>{{ row.categorySlug }}</td>
         <td>{{ row.name }}</td>
-        <td>{{ row.productType }}</td>
-        <td>{{ row.categoryId }}</td>
+        <td>{{ getProductTypeName(row.productType) }}</td>
+        <td>{{ row.categoryName }}</td>
         <td>{{ row.sortOrder }}</td>
-        <td>{{ row.visibitity }}</td>
-        <td>{{ row.isActive }}</td>
+        <td>
+          <p-badge *ngIf="row.visibility==1" severity="success" value="Show"></p-badge>
+          <p-badge *ngIf="row.visibility==0" severity="danger" value="Hide"></p-badge>
+        <td>
+          <p-badge *ngIf="row.isActive==1" severity="success" value="Active"></p-badge>
+          <p-badge *ngIf="row.isActive==0" severity="danger" value="NoActive"></p-badge>
+        </td>
       </tr>
     </ng-template>
     <ng-template pTemplate="summary">

@@ -77,15 +77,14 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
                 input.SeoMetaDescription,
                 input.Description,
                 input.SellPrice);
-
             if (input.ThumbnailPictureContent != null && input.ThumbnailPictureContent.Length > 0)
             {
                 await SaveThumbnailImageAsync(input.ThumbnailPictureName, input.ThumbnailPictureContent);
                 product.ThumbnailPicture = input.ThumbnailPictureName;
+
             }
-
             var result = await Repository.InsertAsync(product);
-
+            await UnitOfWorkManager.Current.SaveChangesAsync();
             return ObjectMapper.Map<Product, ProductDto>(result);
         }
 

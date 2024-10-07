@@ -1,12 +1,19 @@
 import { PagedResultDto } from '@abp/ng.core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-
 import { DialogService } from 'primeng/dynamicdialog';
 import { Subject, takeUntil } from 'rxjs';
 import { ProductDetailComponent } from './product-detail.component';
 import { NotificationService } from '../shared/services/notification.service';
-import { ProductDto, ProductInListDto, ProductsService } from '@proxy/erp/tandung/admin/catalog/products';
-import { ProductCategoriesService, ProductCategoryInListDto } from '@proxy/erp/tandung/admin/catalog/product-categories';
+import {
+  ProductDto,
+  ProductInListDto,
+  ProductsService,
+} from '@proxy/erp/tandung/admin/catalog/products';
+import {
+  ProductCategoriesService,
+  ProductCategoryInListDto,
+} from '@proxy/erp/tandung/admin/catalog/product-categories';
+import { ProductType } from '@proxy/erp/tandung/products';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +24,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   private ngUnSubscribe = new Subject<void>();
   blockedPanel: boolean = false;
   items: ProductInListDto[] = [];
+  public selectedItems: ProductInListDto[] = [];
   //paging variable
   public maxResultCount: number = 10;
   public skipCount: number = 0;
@@ -80,8 +88,33 @@ export class ProductComponent implements OnInit, OnDestroy {
       if (data) {
         this.loadData();
         this.notificationService.showSuccess('Add Product Success');
+        this.selectedItems = [];
       }
     });
+  }
+  showEditModel() {
+    if (this.selectedItems.length == 0) {
+      this.notificationService.showError('You choose record');
+      return;
+    }
+    const id = this.selectedItems[0].id;
+    const ref = this.dialogService.open(ProductDetailComponent, {
+      data: {
+        id: id,
+      },
+      header: 'Update product',
+      width: '70%',
+    });
+    ref.onClose.subscribe((data: ProductDto) => {
+      if (data) {
+        this.loadData();
+        this.selectedItems = [];
+        this.notificationService.showSuccess('Update Product Success');
+      }
+    });
+  }
+  getProductTypeName(value: number) {
+    return ProductType[value];
   }
   private toggleBlockUI(enable: boolean) {
     if (enable == true) {

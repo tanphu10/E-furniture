@@ -8736,6 +8736,18 @@
           "regex": null
         },
         {
+          "name": "Visibility",
+          "jsonName": null,
+          "type": "System.Boolean",
+          "typeSimple": "boolean",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
           "name": "IsActive",
           "jsonName": null,
           "type": "System.Boolean",

@@ -50,6 +50,7 @@ export interface ProductInListDto extends EntityDto<string> {
   productType: ProductType;
   sku?: string;
   sortOrder: number;
+  visibility: boolean;
   isActive: boolean;
   categoryId?: string;
   thumbnailPicture?: string;

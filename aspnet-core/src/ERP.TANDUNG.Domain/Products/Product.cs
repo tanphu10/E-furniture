@@ -7,15 +7,13 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace ERP.TANDUNG.Products
 {
-    public class Product:AuditedAggregateRoot<Guid>
-
+    public class Product : AuditedAggregateRoot<Guid>
     {
         public Product()
         {
         }
-
-        public Product(Guid id,Guid manufacturerID, string name, string code, string slug, ProductType productType, string sKU, int sortOrder, bool isActive, Guid categoryId, string seoMetaDescription, string description, string thumbnailPicture,double sellPrice,
-            string categoryName,string categorySlug)
+        public Product(Guid id, Guid manufacturerID, string name, string code, string slug, ProductType productType, string sKU, int sortOrder, bool isActive, Guid categoryId, string seoMetaDescription, string description, string thumbnailPicture, double sellPrice,
+            string categoryName, string categorySlug)
         {
             Id = id;
             ManufacturerID = manufacturerID;
@@ -31,14 +29,15 @@ namespace ERP.TANDUNG.Products
             Description = description;
             ThumbnailPicture = thumbnailPicture;
             SellPrice = sellPrice;
+            CategoryName = categoryName;
+            CategorySlug = categorySlug;
         }
-
         public Guid ManufacturerID { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
         public string Slug { get; set; }
         public ProductType ProductType { get; set; }
-        public string  SKU { get; set; }
+        public string SKU { get; set; }
         public int SortOrder { get; set; }
         public bool IsActive { get; set; }
         public Guid CategoryId { get; set; }
@@ -51,6 +50,4 @@ namespace ERP.TANDUNG.Products
         public string CategorySlug { get; set; }
 
     }
-
-
 }

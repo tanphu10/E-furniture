@@ -1,6 +1,7 @@
-import type { AttributeType } from '../../../product-attributes/attribute-type.enum';
-import type { AttributeType } from '../../../product-attributes/models';
+// import type { AttributeType } from '../../../product-attributes/attribute-type.enum';
+// import type { AttributeType } from '../../../product-attributes/models';
 import type { EntityDto } from '@abp/ng.core';
+import { AttributeType } from '@proxy/erp/tandung/product-attributes';
 
 export interface CreateUpdateProductAttributeDto {
   code?: string;

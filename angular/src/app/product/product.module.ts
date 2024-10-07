@@ -17,6 +17,9 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { EditorModule } from 'primeng/editor';
 import { ESharedModule } from '../shared/modules/e-shared.module';
+import { BadgeModule } from 'primeng/badge';
+import { ImageModule } from 'primeng/image';
+
 
 @NgModule({
   declarations: [ProductComponent, ProductDetailComponent],
@@ -37,6 +40,8 @@ import { ESharedModule } from '../shared/modules/e-shared.module';
     InputTextareaModule,
     EditorModule,
     ESharedModule,
+    BadgeModule,
+    ImageModule
   ],
   // entry:[
   //   ProductDetailComponent
