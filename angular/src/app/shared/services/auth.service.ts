@@ -5,12 +5,13 @@ import { environment } from 'src/environments/environment';
 import { LoginResponseDto } from '../models/LoginResponse.dto';
 import { HttpClient } from '@angular/common/http';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constants/key.const';
+import { TokenStorageService } from './token.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient,private tokenStorageService:TokenStorageService) {}
 
   public refreshToken(refreshToken: string): Observable<LoginResponseDto> {
     var body = {
@@ -47,10 +48,9 @@ export class AuthService {
     );
   }
   public isAuthenticated(): boolean {
-    return localStorage.getItem(ACCESS_TOKEN) != null;
+    return this.tokenStorageService.getToken() != null;
   }
   public logout() {
-    localStorage.removeItem(ACCESS_TOKEN);
-    localStorage.removeItem(REFRESH_TOKEN);
+    this.tokenStorageService.signOut();
   }
 }

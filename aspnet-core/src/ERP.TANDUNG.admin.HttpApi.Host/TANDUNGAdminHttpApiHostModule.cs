@@ -32,6 +32,7 @@ using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ERP.TANDUNG.Admin;
 
@@ -108,6 +109,11 @@ public class TANDUNGAdminHttpApiHostModule : AbpModule
                 options.Authority = configuration["AuthServer:Authority"];
                 options.RequireHttpsMetadata = configuration.GetValue<bool>("AuthServer:RequireHttpsMetadata");
                 options.Audience = "TANDUNG.Admin";
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateAudience = false,
+                    ValidateIssuer = false
+                };
             });
 
         context.Services.Configure<AbpClaimsPrincipalFactoryOptions>(options =>

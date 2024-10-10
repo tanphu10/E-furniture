@@ -15,9 +15,10 @@ import {
 } from '@proxy/erp/tandung/admin/catalog/product-categories';
 import { ProductType } from '@proxy/erp/tandung/products';
 import { ConfirmationService } from 'primeng/api';
+import { ProductAttributeComponent } from './product-attribute.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
 })
@@ -115,6 +116,22 @@ export class ProductComponent implements OnInit, OnDestroy {
       }
     });
   }
+  manageProductAttribute(id: string) {
+    const ref = this.dialogService.open(ProductAttributeComponent, {
+      data: {
+        id: id,
+      },
+      header: 'Management product-attribute',
+      width: '70%',
+    });
+    ref.onClose.subscribe((data: ProductDto) => {
+      if (data) {
+        this.loadData();
+        this.selectedItems = [];
+        this.notificationService.showSuccess('Update Product Success');
+      }
+    });
+  }
   deleteItems() {
     if (this.selectedItems.length == 0) {
       this.notificationService.showError('you must choose record');
@@ -142,9 +159,9 @@ export class ProductComponent implements OnInit, OnDestroy {
           this.selectedItems = [];
           this.toggleBlockUI(false);
         },
-        error:()=>{
-          this.toggleBlockUI(false)
-        }
+        error: () => {
+          this.toggleBlockUI(false);
+        },
       });
   }
   getProductTypeName(value: number) {

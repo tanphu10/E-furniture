@@ -1,0 +1,84 @@
+<p-panel header="List Attribute">
+  <!-- filter -->
+  <div class="grid">
+    <div class="col-4">
+      <button pButton label="Add" (click)="showAddModel()" iconPos="left" icon="fa fa-plus"
+        class="ml-1 p-button-success"></button>
+      <button pButton type="button" (click)="showEditModel()" *ngIf="selectedItems.length == 1"
+        class="ml-1 p-button-help" icon="fa fa-minus" iconPos="left" label="Sửa"></button>
+      <button pButton type="button" label="Delete" (click)="deleteItems()" *ngIf="selectedItems.length >= 01"
+        class="ml-1 p-button-danger" iconPos="left" icon="fa fa-minus"></button>
+    </div>
+    <div class="col-8">
+      <div class="formgroup-inline">
+        <div class="field">
+          <label for="txt-keyword" class="p-sr-only">Key Word</label>
+          <input id="txt-keyword" type="text" pInputText placeholder="Keyword">
+        </div>
+        <button type="button" pButton icon="fa fa-search" iconPos="left" (click)="loadData">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- table -->
+  <p-table #pnl [value]="items" [(selection)]="selectedItems" selectionMode="multiple">
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 10px">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th>Code</th>
+        <th>Data Type</th>
+        <th>Label</th>
+        <th>SortOrder</th>
+        <th>Visibitity</th>
+        <th>IsRequired</th>
+        <th>IsUnique</th>
+        <th>IsActive</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-row>
+      <tr [pSelectableRow]="row">
+        <td style="width: 10px">
+          <span class="ui-column-title"></span>
+          <p-tableCheckbox [value]="row"></p-tableCheckbox>
+        </td>
+        <td>{{ row.code }}</td>
+        <td>{{ getAttributeTypeName(row.dataType) }}</td>
+        <td>{{ row.label }}</td>
+        <td>{{ row.sortOrder }}</td>
+        <td>
+          <p-badge *ngIf="row.visibility==1" severity="success" value="Show"></p-badge>
+          <p-badge *ngIf="row.visibility==0" severity="danger" value="Hide"></p-badge>
+        </td>
+        <td>
+          <p-badge *ngIf="row.isRequired==1" severity="success" value="Yes"></p-badge>
+          <p-badge *ngIf="row.isRequired==0" severity="danger" value="No"></p-badge>
+        </td>
+        <td>
+          <p-badge *ngIf="row.isUnique==1" severity="success" value="Yes"></p-badge>
+          <p-badge *ngIf="row.isUnique==0" severity="danger" value="No"></p-badge>
+        </td>
+        <td>
+          <p-badge *ngIf="row.isActive==1" severity="success" value="Active"></p-badge>
+          <p-badge *ngIf="row.isActive==0" severity="danger" value="NoActive"></p-badge>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div style="text-align: left">
+        Total Record: {{totalCount|number}}
+      </div>
+    </ng-template>
+  </p-table>
+  <!-- paginator -->
+
+  <p-paginator [rows]="maxResultCount" [totalRecords]="totalCount" (onPageChange)="pageChanged($event)"
+    [rowsPerPageOptions]="[10, 20, 30]"> </p-paginator>
+  <!-- block UI -->
+  <p-blockUI [target]="pnl" [blocked]="blockedPanel">
+    <p-progressSpinner> </p-progressSpinner>
+  </p-blockUI>
+
+
+</p-panel>

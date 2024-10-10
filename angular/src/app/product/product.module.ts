@@ -20,10 +20,12 @@ import { ESharedModule } from '../shared/modules/e-shared.module';
 import { BadgeModule } from 'primeng/badge';
 import { ImageModule } from 'primeng/image';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ProductAttributeComponent } from './product-attribute.component';
+import { CalendarModule } from 'primeng/calendar';
 
 
 @NgModule({
-  declarations: [ProductComponent, ProductDetailComponent],
+  declarations: [ProductComponent, ProductDetailComponent,ProductAttributeComponent],
   imports: [
     SharedModule,
     ProductRoutingModule,
@@ -43,10 +45,12 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     ESharedModule,
     BadgeModule,
     ImageModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    CalendarModule
   ],
-  // entry:[
-  //   ProductDetailComponent
-  // ]
+  // entryComponents: [
+  //   ProductDetailComponent,
+  //   ProductAttributeComponent
+  // ],
 })
 export class ProductModule {}

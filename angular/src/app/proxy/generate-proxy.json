@@ -958,7 +958,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Manufacturers.IManufacturersAppService"
             },
             "GetListAllAsync": {
@@ -973,7 +973,7 @@
                 "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>",
                 "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto]"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Manufacturers.IManufacturersAppService"
             },
             "GetListFilterAsyncByInput": {
@@ -1034,7 +1034,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerInListDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Manufacturers.IManufacturersAppService"
             },
             "CreateAsyncByInput": {
@@ -1071,7 +1071,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto>"
             },
             "UpdateAsyncByIdAndInput": {
@@ -1128,7 +1128,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,System.Guid,ERP.TANDUNG.Admin.Catalog.Manufacturers.CreateUpdateManufacturerDto>"
             },
             "DeleteAsyncById": {
@@ -1165,7 +1165,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.Guid>"
             },
             "GetAsyncById": {
@@ -1202,7 +1202,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
@@ -1251,7 +1251,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,ERP.TANDUNG.Admin.Catalog.Manufacturers.ManufacturerDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
@@ -1441,7 +1441,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.IProductAttributesAppService"
             },
             "GetListAllAsync": {
@@ -1456,7 +1456,7 @@
                 "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>",
                 "typeSimple": "[ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto]"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.IProductAttributesAppService"
             },
             "GetListFilterAsyncByInput": {
@@ -1517,7 +1517,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeInListDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.IProductAttributesAppService"
             },
             "CreateAsyncByInput": {
@@ -1554,7 +1554,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto>"
             },
             "UpdateAsyncByIdAndInput": {
@@ -1611,7 +1611,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,System.Guid,ERP.TANDUNG.Admin.Catalog.ProductAttributes.CreateUpdateProductAttributeDto>"
             },
             "DeleteAsyncById": {
@@ -1648,7 +1648,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.Guid>"
             },
             "GetAsyncById": {
@@ -1685,7 +1685,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
@@ -1734,7 +1734,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,ERP.TANDUNG.Admin.Catalog.ProductAttributes.ProductAttributeDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
@@ -1924,7 +1924,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductCategories.IProductCategoriesAppService"
             },
             "GetListAllAsync": {
@@ -1939,7 +1939,7 @@
                 "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>",
                 "typeSimple": "[ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto]"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductCategories.IProductCategoriesAppService"
             },
             "GetListFilterAsyncByInput": {
@@ -2000,7 +2000,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryInListDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.ProductCategories.IProductCategoriesAppService"
             },
             "CreateAsyncByInput": {
@@ -2037,7 +2037,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto>"
             },
             "UpdateAsyncByIdAndInput": {
@@ -2094,7 +2094,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,System.Guid,ERP.TANDUNG.Admin.Catalog.ProductCategories.CreateUpdateProductCategoryDto>"
             },
             "DeleteAsyncById": {
@@ -2131,7 +2131,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.Guid>"
             },
             "GetAsyncById": {
@@ -2168,7 +2168,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
@@ -2217,7 +2217,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,ERP.TANDUNG.Admin.Catalog.ProductCategories.ProductCategoryDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
@@ -2516,7 +2516,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto>"
             },
             "UpdateAsyncByIdAndInput": {
@@ -2573,7 +2573,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,System.Guid,ERP.TANDUNG.Admin.Catalog.Products.CreateUpdateProductDto>"
             },
             "DeleteMultipleAsyncByIds": {
@@ -2610,7 +2610,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListAllAsync": {
@@ -2625,7 +2625,7 @@
                 "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>",
                 "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto]"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListFilterAsyncByInput": {
@@ -2698,7 +2698,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductInListDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetThumbnailImageAsyncByFileName": {
@@ -2735,7 +2735,7 @@
                 "type": "System.String",
                 "typeSimple": "string"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetSuggestNewCodeAsync": {
@@ -2750,7 +2750,7 @@
                 "type": "System.String",
                 "typeSimple": "string"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "AddProductAttributeAsyncByInput": {
@@ -2787,7 +2787,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "RemoveProductAttributeAsyncByAttributeIdAndId": {
@@ -2844,7 +2844,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListProductAttributeAllAsyncByProductId": {
@@ -2881,7 +2881,7 @@
                 "type": "System.Collections.Generic.List<ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto>",
                 "typeSimple": "[ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto]"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "GetListProductAttributesAsyncByInput": {
@@ -2954,7 +2954,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.ProductsAppService"
             },
             "UpdateProductAttributeAsyncByIdAndInput": {
@@ -3011,7 +3011,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.Attributes.ProductAttributeValueDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "ERP.TANDUNG.Admin.Catalog.Products.IProductsAppService"
             },
             "DeleteAsyncById": {
@@ -3048,7 +3048,7 @@
                 "type": "System.Void",
                 "typeSimple": "System.Void"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.Guid>"
             },
             "GetAsyncById": {
@@ -3085,7 +3085,7 @@
                 "type": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto",
                 "typeSimple": "ERP.TANDUNG.Admin.Catalog.Products.ProductDto"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,ERP.TANDUNG.Admin.Catalog.Products.ProductDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             },
             "GetListAsyncByInput": {
@@ -3134,7 +3134,7 @@
                 "type": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductDto>",
                 "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<ERP.TANDUNG.Admin.Catalog.Products.ProductDto>"
               },
-              "allowAnonymous": null,
+              "allowAnonymous": false,
               "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<ERP.TANDUNG.Admin.Catalog.Products.ProductDto,ERP.TANDUNG.Admin.Catalog.Products.ProductDto,System.Guid,Volo.Abp.Application.Dtos.PagedResultRequestDto>"
             }
           }
@@ -9233,18 +9233,18 @@
       "baseType": "System.Enum",
       "isEnum": true,
       "enumNames": [
-        "Date",
+        "Int",
         "Varchar",
         "Text",
-        "Int",
-        "Decimal"
+        "Decimal",
+        "Date"
       ],
       "enumValues": [
-        0,
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "genericArguments": null,
       "properties": null
@@ -9261,12 +9261,12 @@
         "Downloadable"
       ],
       "enumValues": [
-        0,
         1,
         2,
         3,
         4,
-        5
+        5,
+        6
       ],
       "genericArguments": null,
       "properties": null
