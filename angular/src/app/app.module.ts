@@ -20,8 +20,13 @@ import { DialogService } from 'primeng/dynamicdialog';
 import { NotificationService } from './shared/services/notification.service';
 import { ThemeLeptonXModule } from '@abp/ng.theme.lepton-x';
 import { SideMenuLayoutModule } from '@abp/ng.theme.lepton-x/layouts';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { UtilityService } from './shared/services/utility.service';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ToastModule } from 'primeng/toast';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './shared/interceptors/token.interceptor';
+import { GlobalHttpInterceptorService } from './shared/interceptors/error-hanlder.interceptor';
 
 @NgModule({
   imports: [
@@ -46,14 +51,28 @@ import { UtilityService } from './shared/services/utility.service';
     ThemeLeptonXModule.forRoot(),
     SideMenuLayoutModule.forRoot(),
     AccountLayoutModule.forRoot(),
+    ConfirmDialogModule,
+    ToastModule
   ],
   declarations: [AppComponent],
   providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    },
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:GlobalHttpInterceptorService,
+      multi:true
+    },
     APP_ROUTE_PROVIDER,
     DialogService,
     MessageService,
     NotificationService,
     UtilityService,
+    ConfirmationService,
+
   ],
   bootstrap: [AppComponent],
 })

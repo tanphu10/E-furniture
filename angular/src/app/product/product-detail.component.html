@@ -81,13 +81,12 @@
           [validationMessages]="validationMessages"></app-validation-message>
       </div>
       <div class="field col-12 md:col-6">
-        <label for="image" class="block">Image
-        </label>
-        <input id="thumbnailImage" type="file" (change)="onFileChange($event)" class="w-full" />
+        <label for="thumbnailImage" class="block">Hình ảnh</label>
+        <input id="thumbnailImage" type="file" (change)="onFileChange($event)" class="w-full">
       </div>
 
       <div class="field col-12 md:col-6">
-        <p-image [src]="thumbnailImage" alt="selectedEntity.thumbnailPicture" width="250" [preview]="true" />
+        <p-image [src]="thumbnailImage" [alt]="selectedEntity.name" width="250" [preview]="true"></p-image>
       </div>
 
 

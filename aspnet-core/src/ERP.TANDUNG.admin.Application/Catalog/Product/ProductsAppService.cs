@@ -12,9 +12,11 @@ using Volo.Abp.BlobStoring;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp;
 using ERP.TANDUNG.Admin.Catalog.Products.Attributes;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ERP.TANDUNG.Admin.Catalog.Products
 {
+    [Authorize]
     public class ProductsAppService : CrudAppService<
        Product,
        ProductDto,

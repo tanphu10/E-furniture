@@ -2,10 +2,15 @@
   <!-- filter -->
   <div class="grid">
     <div class="col-4">
-      <button pButton label="Add New" (click)="showAddModel()" iconPos="left" icon="fa fa-plus"></button>
-      <button pButton label="Update" (click)="showEditModel()" *ngIf="selectedItems.length==1" iconPos="left"
-        icon="fa fa-plus"></button>
+      <button pButton label="Add" (click)="showAddModel()" iconPos="left" icon="fa fa-plus"
+        class="ml-1 p-button-success"></button>
+      <button pButton type="button" (click)="showEditModel()" *ngIf="selectedItems.length == 1"
+        class="ml-1 p-button-help" icon="fa fa-minus" iconPos="left" label="Sửa"></button>
+      <!-- <button pButton type="button" label="Update" (click)="showEditModel()" *ngIf="selectedItems.length==1"
+        iconPos="left" icon="fa fa-minus"></button> -->
 
+      <button pButton type="button" label="Delete" (click)="deleteItems()" *ngIf="selectedItems.length >= 01"
+        class="ml-1 p-button-danger" iconPos="left" icon="fa fa-minus"></button>
     </div>
     <div class="col-8">
       <div class="formgroup-inline">
@@ -22,11 +27,10 @@
   </div>
 
   <!-- table -->
-  <p-table #pnl [value]="items" [(selection)]="selectedItems" selectionMode="multiple"
-    [tableStyle]="{ 'min-width': '50rem' }">
+  <p-table #pnl [value]="items" [(selection)]="selectedItems" selectionMode="multiple">
     <ng-template pTemplate="header">
-      <tr [pselectableRow]="row">
-        <th style="width: 10px;">
+      <tr>
+        <th style="width: 10px">
           <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
         </th>
         <th>Code</th>
@@ -41,10 +45,10 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-row>
-      <tr>
-        <td style="width: 10px;">
+      <tr [pSelectableRow]="row">
+        <td style="width: 10px">
           <span class="ui-column-title"></span>
-          <p-tableHeaderCheckbox [value]="row"></p-tableHeaderCheckbox>
+          <p-tableCheckbox [value]="row"></p-tableCheckbox>
         </td>
         <td>{{ row.code }}</td>
         <td>{{ row.sku }}</td>

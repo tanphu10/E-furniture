@@ -12,7 +12,7 @@ namespace ERP.TANDUNG.Products
         public Product()
         {
         }
-        public Product(Guid id, Guid manufacturerID, string name, string code, string slug, ProductType productType, string sKU, int sortOrder, bool isActive, Guid categoryId, string seoMetaDescription, string description, string thumbnailPicture, double sellPrice,
+        public Product(Guid id, Guid manufacturerID, string name, string code, string slug, ProductType productType, string sKU, int sortOrder,bool visibility, bool isActive, Guid categoryId, string seoMetaDescription, string description, string thumbnailPicture, double sellPrice,
             string categoryName, string categorySlug)
         {
             Id = id;
@@ -23,6 +23,7 @@ namespace ERP.TANDUNG.Products
             ProductType = productType;
             SKU = sKU;
             SortOrder = sortOrder;
+            Visibility = visibility;
             IsActive = isActive;
             CategoryId = categoryId;
             SeoMetaDescription = seoMetaDescription;

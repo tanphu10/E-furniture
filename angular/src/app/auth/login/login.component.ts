@@ -5,7 +5,10 @@ import { Subject, takeUntil } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from 'src/app/shared/constants/key.const';
 import { LoginRequestDto } from 'src/app/shared/models/login-request.dto';
+import { LoginResponseDto } from 'src/app/shared/models/LoginResponse.dto';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { NotificationService } from 'src/app/shared/services/notification.service';
+import { TokenStorageService } from 'src/app/shared/services/token.service';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +37,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class LoginComponent implements OnDestroy {
   private ngUnsubscribe = new Subject<void>();
   valCheck: string[] = ['remember'];
-
+  public blockedPanel = false;
   password!: string;
 
   loginForm: FormGroup;
@@ -43,7 +46,9 @@ export class LoginComponent implements OnDestroy {
     public layoutService: LayoutService,
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private tokenService: TokenStorageService,
+    private notificationService: NotificationService
   ) {
     this.loginForm = this.fb.group({
       username: new FormControl('', Validators.required),
@@ -59,13 +64,28 @@ export class LoginComponent implements OnDestroy {
     this.authService
       .login(request)
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(res => {
-        localStorage.setItem(ACCESS_TOKEN, res.access_token);
-        localStorage.setItem(REFRESH_TOKEN, res.refresh_token);
-        this.router.navigate(['']);
+      .subscribe({
+        next: (res: LoginResponseDto) => {
+          this.tokenService.saveToken(res.access_token);
+          this.tokenService.saveRefreshToken(res.refresh_token);
+          this.toggleBlockUI(false);
+          this.router.navigate(['']);
+        },
+        error: ex => {
+          this.notificationService.showError('Login Fail.');
+          this.toggleBlockUI(false);
+        },
       });
   }
-
+  private toggleBlockUI(enable: boolean) {
+    if (enable == true) {
+      this.blockedPanel = true;
+    } else {
+      setTimeout(() => {
+        this.blockedPanel = false;
+      }, 1000);
+    }
+  }
   ngOnDestroy(): void {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();

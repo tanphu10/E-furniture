@@ -1,4 +1,5 @@
 ﻿using ERP.TANDUNG.ProductAttributes;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ using Volo.Abp.Domain.Repositories;
 
 namespace ERP.TANDUNG.Admin.Catalog.ProductAttributes
 {
+    [Authorize]
+
     public class ProductAttributesAppService : CrudAppService<
         ProductAttribute,
         ProductAttributeDto,

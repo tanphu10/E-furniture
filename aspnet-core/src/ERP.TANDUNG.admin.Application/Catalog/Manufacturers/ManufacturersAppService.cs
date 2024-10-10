@@ -1,5 +1,6 @@
 ﻿using ERP.TANDUNG.Manufacturers;
 using ERP.TANDUNG.ProductCategories;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace ERP.TANDUNG.Admin.Catalog.Manufacturers
 {
+    [Authorize]
     public class ManufacturersAppService : CrudAppService<Manufacturer,
         ManufacturerDto, Guid, PagedResultRequestDto,
         CreateUpdateManufacturerDto, CreateUpdateManufacturerDto>, IManufacturersAppService

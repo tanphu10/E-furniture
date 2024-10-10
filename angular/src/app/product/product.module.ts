@@ -19,6 +19,7 @@ import { EditorModule } from 'primeng/editor';
 import { ESharedModule } from '../shared/modules/e-shared.module';
 import { BadgeModule } from 'primeng/badge';
 import { ImageModule } from 'primeng/image';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ImageModule } from 'primeng/image';
     EditorModule,
     ESharedModule,
     BadgeModule,
-    ImageModule
+    ImageModule,
+    ConfirmDialogModule
   ],
   // entry:[
   //   ProductDetailComponent

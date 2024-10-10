@@ -1,4 +1,5 @@
 ﻿using ERP.TANDUNG.Configurations.Attributes;
+using ERP.TANDUNG.Configurations.IdentitySettings;
 using ERP.TANDUNG.Configurations.Inventories;
 using ERP.TANDUNG.Configurations.InventoryTickets;
 using ERP.TANDUNG.Configurations.Manufacturers;
@@ -150,6 +151,8 @@ public class TANDUNGDbContext :
         builder.ApplyConfiguration(new PromotionManufacturerConfiguration());
         builder.ApplyConfiguration(new PromotionProductConfiguration());
         builder.ApplyConfiguration(new PromotionUsageHistoryConfiguration());
+        builder.ApplyConfiguration(new IdentitySettingConfiguration());
+
         //builder.Entity<YourEntity>(b =>
         //{
         //    b.ToTable(TANDUNGConsts.DbTablePrefix + "YourEntities", TANDUNGConsts.DbSchema);

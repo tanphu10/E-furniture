@@ -14,6 +14,7 @@ import {
   ProductCategoryInListDto,
 } from '@proxy/erp/tandung/admin/catalog/product-categories';
 import { ProductType } from '@proxy/erp/tandung/products';
+import { ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -37,7 +38,8 @@ export class ProductComponent implements OnInit, OnDestroy {
     private productService: ProductsService,
     private productCategoriesService: ProductCategoriesService,
     private dialogService: DialogService,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private confirmationService: ConfirmationService
   ) {}
   ngOnInit(): void {
     this.loadProductCategory();
@@ -112,6 +114,38 @@ export class ProductComponent implements OnInit, OnDestroy {
         this.notificationService.showSuccess('Update Product Success');
       }
     });
+  }
+  deleteItems() {
+    if (this.selectedItems.length == 0) {
+      this.notificationService.showError('you must choose record');
+    }
+    var ids = [];
+    this.selectedItems.forEach(element => {
+      ids.push(element.id);
+    });
+    this.confirmationService.confirm({
+      message: 'Do you want to Delete this record ?',
+      accept: () => {
+        this.deleteItemConfirm(ids);
+      },
+    });
+  }
+  deleteItemConfirm(ids: string[]) {
+    this.toggleBlockUI(true);
+    this.productService
+      .deleteMultiple(ids)
+      .pipe(takeUntil(this.ngUnSubscribe))
+      .subscribe({
+        next: () => {
+          this.notificationService.showSuccess('Delete Success');
+          this.loadData();
+          this.selectedItems = [];
+          this.toggleBlockUI(false);
+        },
+        error:()=>{
+          this.toggleBlockUI(false)
+        }
+      });
   }
   getProductTypeName(value: number) {
     return ProductType[value];

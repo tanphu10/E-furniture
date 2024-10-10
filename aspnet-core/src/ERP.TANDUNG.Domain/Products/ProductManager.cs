@@ -28,7 +28,7 @@ namespace ERP.TANDUNG.Products
             if (await _productRepository.AnyAsync(x => x.SKU == sKU))
                 throw new UserFriendlyException("Mã SKU đang tồn tại", TANDUNGDomainErrorCodes.ProductSkuAlreadyExists);
             var category = await _productCategoryRepository.GetAsync(categoryId);
-            return new Product(Guid.NewGuid(), manufacturerID, name, code, slug, productType, sKU, sortOrder, isActive, categoryId, seoMetaDescription, description, null, sellPrice, category?.Name, category?.Slug);
+            return new Product(Guid.NewGuid(), manufacturerID, name, code, slug, productType, sKU, sortOrder, visibility, isActive, categoryId, seoMetaDescription, description, null, sellPrice, category?.Name, category?.Slug);
         }
     }
 }
