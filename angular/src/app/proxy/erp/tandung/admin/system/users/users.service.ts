@@ -1,4 +1,4 @@
-import type { CreateUserDto, UpdateUserDto, UserDto, UserInListDto } from './models';
+import type { CreateUserDto, SetPasswordDto, UpdateUserDto, UserDto, UserInListDto } from './models';
 import { RestService, Rest } from '@abp/ng.core';
 import type { PagedResultDto, PagedResultRequestDto } from '@abp/ng.core';
 import { Injectable } from '@angular/core';
@@ -9,6 +9,15 @@ import type { BaseListFilterDto } from '../../models';
 })
 export class UsersService {
   apiName = 'Default';
+  
+
+  assignRole = (userId: string, roleNames: string[], config?: Partial<Rest.Config>) =>
+    this.restService.request<any, void>({
+      method: 'POST',
+      url: `/api/app/users/assign-role/${userId}`,
+      body: roleNames,
+    },
+    { apiName: this.apiName,...config });
   
 
   create = (input: CreateUserDto, config?: Partial<Rest.Config>) =>
@@ -68,6 +77,15 @@ export class UsersService {
       method: 'GET',
       url: '/api/app/users/filter',
       params: { keyword: input.keyword, skipCount: input.skipCount, maxResultCount: input.maxResultCount },
+    },
+    { apiName: this.apiName,...config });
+  
+
+  setPassword = (userId: string, input: SetPasswordDto, config?: Partial<Rest.Config>) =>
+    this.restService.request<any, void>({
+      method: 'POST',
+      url: `/api/app/users/set-password/${userId}`,
+      body: input,
     },
     { apiName: this.apiName,...config });
   

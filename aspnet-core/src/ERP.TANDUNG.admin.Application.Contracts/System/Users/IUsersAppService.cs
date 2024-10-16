@@ -13,6 +13,7 @@ namespace ERP.TANDUNG.Admin.System.Users
         Task DeleteMultipleAsync(IEnumerable<Guid> ids);
         Task<List<UserInListDto>> GetListAllAsync(string filterKeyword);
         Task<PagedResultDto<UserInListDto>> GetListFilterAsync(BaseListFilterDto input);
-
+        Task AssignRoleAsync(Guid userId, string[] roleNames);
+        Task SetPasswordAsync(Guid userId, SetPasswordDto input);
     }
 }

@@ -13,10 +13,11 @@ using Volo.Abp.Domain.Repositories;
 using Volo.Abp;
 using ERP.TANDUNG.Admin.Catalog.Products.Attributes;
 using Microsoft.AspNetCore.Authorization;
+using ERP.TANDUNG.Admin.Permissions;
 
 namespace ERP.TANDUNG.Admin.Catalog.Products
 {
-    [Authorize]
+    [Authorize(TANDUNGPermissions.Product.Default, Policy = "AdminOnly")]
     public class ProductsAppService : CrudAppService<
        Product,
        ProductDto,
@@ -61,8 +62,13 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             _productAttributeDecimalRepository = productAttributeDecimalRepository;
             _productAttributeVarcharRepository = productAttributeVarcharRepository;
             _productAttributeTextRepository = productAttributeTextRepository;
+            GetPolicyName = TANDUNGPermissions.Product.Default;
+            GetListPolicyName = TANDUNGPermissions.Product.Default;
+            CreatePolicyName = TANDUNGPermissions.Product.Create;
+            UpdatePolicyName = TANDUNGPermissions.Product.Update;
+            DeletePolicyName = TANDUNGPermissions.Product.Delete;
         }
-
+        [Authorize(TANDUNGPermissions.Product.Create)]
         public override async Task<ProductDto> CreateAsync(CreateUpdateProductDto input)
         {
             var product = await _productManager.CreateAsync(
@@ -90,6 +96,8 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             return ObjectMapper.Map<Product, ProductDto>(result);
         }
 
+
+        [Authorize(TANDUNGPermissions.Product.Update)]
         public override async Task<ProductDto> UpdateAsync(Guid id, CreateUpdateProductDto input)
         {
             var product = await Repository.GetAsync(id);
@@ -127,11 +135,15 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             return ObjectMapper.Map<Product, ProductDto>(product);
         }
 
+
+        [Authorize(TANDUNGPermissions.Product.Delete)]
         public async Task DeleteMultipleAsync(IEnumerable<Guid> ids)
         {
             await Repository.DeleteManyAsync(ids);
             await UnitOfWorkManager.Current.SaveChangesAsync();
         }
+
+        [Authorize(TANDUNGPermissions.Product.Default)]
 
         public async Task<List<ProductInListDto>> GetListAllAsync()
         {
@@ -142,6 +154,8 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             return ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data);
         }
 
+
+        [Authorize(TANDUNGPermissions.Product.Default)]
         public async Task<PagedResultDto<ProductInListDto>> GetListFilterAsync(ProductListFilterDto input)
         {
             var query = await Repository.GetQueryableAsync();
@@ -158,6 +172,8 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             return new PagedResultDto<ProductInListDto>(totalCount, ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data));
         }
 
+
+        [Authorize(TANDUNGPermissions.Product.Update)]
         private async Task SaveThumbnailImageAsync(string fileName, string base64)
         {
             Regex regex = new Regex(@"^[\w/\:.-]+;base64,");
@@ -166,6 +182,7 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             await _fileContainer.SaveAsync(fileName, bytes, overrideExisting: true);
         }
 
+        [Authorize(TANDUNGPermissions.Product.Default)]
         public async Task<string> GetThumbnailImageAsync(string fileName)
         {
             if (string.IsNullOrEmpty(fileName))
@@ -182,11 +199,13 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             return result;
         }
 
+        [Authorize(TANDUNGPermissions.Product.Default)]
         public async Task<string> GetSuggestNewCodeAsync()
         {
             return await _productCodeGenerator.GenerateAsync();
         }
 
+        [Authorize(TANDUNGPermissions.Product.Create)]
         public async Task<ProductAttributeValueDto> AddProductAttributeAsync(AddUpdateProductAttributeDto input)
         {
             var product = await Repository.GetAsync(input.ProductId);
@@ -256,6 +275,7 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             };
         }
 
+        [Authorize(TANDUNGPermissions.Product.Delete)]
         public async Task RemoveProductAttributeAsync(Guid attributeId, Guid id)
         {
             var attribute = await _productAttributeRepository.GetAsync(x => x.Id == attributeId);
@@ -308,6 +328,7 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             await UnitOfWorkManager.Current.SaveChangesAsync();
         }
 
+        [Authorize(TANDUNGPermissions.Product.Default)]
         public async Task<List<ProductAttributeValueDto>> GetListProductAttributeAllAsync(Guid productId)
         {
             var attributeQuery = await _productAttributeRepository.GetQueryableAsync();
@@ -360,6 +381,7 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             return await AsyncExecuter.ToListAsync(query);
         }
 
+        [Authorize(TANDUNGPermissions.Product.Default)]
         public async Task<PagedResultDto<ProductAttributeValueDto>> GetListProductAttributesAsync(ProductAttributeListFilterDto input)
         {
             var attributeQuery = await _productAttributeRepository.GetQueryableAsync();
@@ -418,6 +440,7 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             return new PagedResultDto<ProductAttributeValueDto>(totalCount, data);
         }
 
+        [Authorize(TANDUNGPermissions.Product.Update)]
         public async Task<ProductAttributeValueDto> UpdateProductAttributeAsync(Guid id, AddUpdateProductAttributeDto input)
         {
             var product = await Repository.GetAsync(input.ProductId);
@@ -512,9 +535,5 @@ namespace ERP.TANDUNG.Admin.Catalog.Products
             };
         }
 
-        //public Task<PagedResultDto<ProductAttributeValueDto>> GetListProductAttributeAsync(ProductAttributeListFilterDto productId)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

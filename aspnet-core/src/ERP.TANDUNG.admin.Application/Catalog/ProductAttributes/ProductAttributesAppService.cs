@@ -1,4 +1,5 @@
-﻿using ERP.TANDUNG.ProductAttributes;
+﻿using ERP.TANDUNG.Admin.Permissions;
+using ERP.TANDUNG.ProductAttributes;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace ERP.TANDUNG.Admin.Catalog.ProductAttributes
 {
-    [Authorize]
+    [Authorize(TANDUNGPermissions.Product.Default, Policy = "AdminOnly")]
 
     public class ProductAttributesAppService : CrudAppService<
         ProductAttribute,
@@ -22,8 +23,14 @@ namespace ERP.TANDUNG.Admin.Catalog.ProductAttributes
     {
         public ProductAttributesAppService(IRepository<ProductAttribute, Guid> repository) : base(repository)
         {
+            GetPolicyName = TANDUNGPermissions.Attribute.Default;
+            GetListPolicyName = TANDUNGPermissions.Attribute.Default;
+            CreatePolicyName = TANDUNGPermissions.Attribute.Create;
+            UpdatePolicyName = TANDUNGPermissions.Attribute.Update;
+            DeletePolicyName = TANDUNGPermissions.Attribute.Delete;
 
         }
+        [Authorize(TANDUNGPermissions.Attribute.Delete)]
 
         public async Task DeleteMultipleAsync(IEnumerable<Guid> ids)
         {
@@ -31,6 +38,7 @@ namespace ERP.TANDUNG.Admin.Catalog.ProductAttributes
             await UnitOfWorkManager.Current.SaveChangesAsync();
 
         }
+        [Authorize(TANDUNGPermissions.Attribute.Default)]
 
         public async Task<List<ProductAttributeInListDto>> GetListAllAsync()
         {
@@ -40,6 +48,7 @@ namespace ERP.TANDUNG.Admin.Catalog.ProductAttributes
             return ObjectMapper.Map<List<ProductAttribute>, List<ProductAttributeInListDto>>(data);
 
         }
+        [Authorize(TANDUNGPermissions.Attribute.Default)]
 
         public async Task<PagedResultDto<ProductAttributeInListDto>> GetListFilterAsync(BaseListFilterDto input)
         {

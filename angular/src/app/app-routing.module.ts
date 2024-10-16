@@ -7,26 +7,21 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-    component: AppLayoutComponent
+    component: AppLayoutComponent,
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
   },
   {
-    path: 'product',
-    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
-    component: AppLayoutComponent
+    path: 'catalog',
+    loadChildren: () => import('./catalogs/catalog.module').then(m => m.CatalogModule),
+    component: AppLayoutComponent,
   },
   {
-    path: 'attribute',
-    loadChildren: () => import('./attribute/attribute.module').then(m => m.AttributeModule),
-    component: AppLayoutComponent
-  },
-  {
-    path: 'role',
-    loadChildren: () => import('./role/role.module').then(m => m.RoleModule),
-    component: AppLayoutComponent
+    path: 'system',
+    loadChildren: () => import('./systems/system.module').then(m => m.SystemModule),
+    component: AppLayoutComponent,
   },
 ];
 

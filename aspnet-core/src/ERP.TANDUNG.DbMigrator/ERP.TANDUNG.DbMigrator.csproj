@@ -36,7 +36,7 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Autofac" Version="8.2.0" />
     <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="8.2.0" />
-    <ProjectReference Include="..\ERP.TANDUNG.Application.Contracts\ERP.TANDUNG.Application.Contracts.csproj" />
+    <ProjectReference Include="..\ERP.TANDUNG.admin.Application.Contracts\ERP.TANDUNG.admin.Application.Contracts.csproj" />
     <ProjectReference Include="..\ERP.TANDUNG.EntityFrameworkCore\ERP.TANDUNG.EntityFrameworkCore.csproj" />
   </ItemGroup>
 

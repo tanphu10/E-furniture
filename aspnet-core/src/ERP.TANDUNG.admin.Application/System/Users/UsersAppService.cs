@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ using Volo.Abp.Identity;
 
 namespace ERP.TANDUNG.Admin.System.Users
 {
+    [Authorize(IdentityPermissions.Users.Default, Policy = "AdminOnly")]
+
     public class UsersAppService : CrudAppService<IdentityUser, UserDto, Guid, PagedResultRequestDto, CreateUserDto, UpdateUserDto>, IUsersAppService
     {
         private readonly IdentityUserManager _userManager;
@@ -20,7 +23,14 @@ namespace ERP.TANDUNG.Admin.System.Users
         public UsersAppService(IRepository<IdentityUser, Guid> repository, IdentityUserManager userManager) : base(repository)
         {
             _userManager = userManager;
+            GetPolicyName = IdentityPermissions.Users.Default;
+            GetListPolicyName = IdentityPermissions.Users.Default;
+            CreatePolicyName = IdentityPermissions.Users.Create;
+            UpdatePolicyName = IdentityPermissions.Users.Update;
+            DeletePolicyName = IdentityPermissions.Users.Delete;
         }
+
+        [Authorize(IdentityPermissions.Users.Delete)]
 
         public async Task DeleteMultipleAsync(IEnumerable<Guid> ids)
         {
@@ -28,6 +38,7 @@ namespace ERP.TANDUNG.Admin.System.Users
             await UnitOfWorkManager.Current.SaveChangesAsync();
         }
 
+        [Authorize(IdentityPermissions.Users.Default)]
         public async Task<List<UserInListDto>> GetListAllAsync(string filterKeyword)
         {
             var query = await Repository.GetQueryableAsync();
@@ -40,6 +51,7 @@ namespace ERP.TANDUNG.Admin.System.Users
             return ObjectMapper.Map<List<IdentityUser>, List<UserInListDto>>(data);
         }
 
+        [Authorize(IdentityPermissions.Users.Default)]
         public async Task<PagedResultDto<UserInListDto>> GetListFilterAsync(BaseListFilterDto input)
         {
             var query = await Repository.GetQueryableAsync();
@@ -57,6 +69,7 @@ namespace ERP.TANDUNG.Admin.System.Users
             var users = ObjectMapper.Map<List<IdentityUser>, List<UserInListDto>>(data);
             return new PagedResultDto<UserInListDto>(totalCount, users);
         }
+        [Authorize(IdentityPermissions.Users.Create)]
         public override async Task<UserDto> CreateAsync(CreateUserDto input)
         {
             var query = await Repository.GetQueryableAsync();
@@ -74,6 +87,7 @@ namespace ERP.TANDUNG.Admin.System.Users
             var user = new IdentityUser(userId, input.UserName, input.Email);
             user.Name = input.Name;
             user.Surname = input.SurName;
+            user.SetPhoneNumber(input.PhoneNumber, true);
             var result = await _userManager.CreateAsync(user, input.Password);
             if (result.Succeeded)
             {
@@ -91,6 +105,8 @@ namespace ERP.TANDUNG.Admin.System.Users
                 throw new UserFriendlyException(errors);
             }
         }
+       
+        [Authorize(IdentityPermissions.Users.Update)]
         public override async Task<UserDto> UpdateAsync(Guid id, UpdateUserDto input)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());
@@ -118,6 +134,8 @@ namespace ERP.TANDUNG.Admin.System.Users
                 throw new UserFriendlyException(errors);
             }
         }
+        [Authorize(IdentityPermissions.Users.Default)]
+
         public override async Task<UserDto> GetAsync(Guid id)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());
@@ -129,6 +147,62 @@ namespace ERP.TANDUNG.Admin.System.Users
             var roles = await _userManager.GetRolesAsync(user);
             userDto.Roles = roles;
             return userDto;
+        }
+
+        [Authorize(IdentityPermissions.Users.Create)]
+        public async Task AssignRoleAsync(Guid userId, string[] roleNames)
+        {
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            if (user == null)
+            {
+                throw new EntityNotFoundException(typeof(IdentityUser), userId);
+            }
+            var currentRoles = await _userManager.GetRolesAsync(user);
+            var removedResult = await _userManager.RemoveFromRolesAsync(user, currentRoles);
+            var addedResullt = await _userManager.AddToRolesAsync(user, roleNames);
+
+            if (!addedResullt.Succeeded || !removedResult.Succeeded)
+            {
+                List<IdentityError> addedErrorList = addedResullt.Errors.ToList();
+                List<IdentityError> removedErrorList = removedResult.Errors.ToList();
+                var errorList = new List<IdentityError>();
+                errorList.AddRange(addedErrorList);
+                errorList.AddRange(removedErrorList);
+                string errors = "";
+                foreach (var error in errorList)
+                {
+                    errors = errors + error.Description.ToString();
+
+                }
+                throw new UserFriendlyException(errors);
+            }
+
+        }
+
+
+        [Authorize(IdentityPermissions.Users.Create)]
+
+        public async Task SetPasswordAsync(Guid userId, SetPasswordDto input)
+        {
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            if (user == null)
+            {
+                throw new EntityNotFoundException(typeof(IdentityUser), userId);
+            }
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var result = await _userManager.ResetPasswordAsync(user, token, input.NewPassword);
+            if (!result.Succeeded)
+            {
+                List<IdentityError> errorList = result.Errors.ToList();
+                string errors = "";
+                foreach (var error in errorList)
+                {
+                    errors = errors + error.Description.ToString();
+
+                }
+                throw new UserFriendlyException(errors);
+
+            }
         }
     }
 }

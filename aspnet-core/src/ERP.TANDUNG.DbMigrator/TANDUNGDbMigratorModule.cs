@@ -1,4 +1,5 @@
-﻿using ERP.TANDUNG.EntityFrameworkCore;
+﻿using ERP.TANDUNG.Admin;
+using ERP.TANDUNG.EntityFrameworkCore;
 using Volo.Abp.Autofac;
 using Volo.Abp.Caching;
 using Volo.Abp.Caching.StackExchangeRedis;

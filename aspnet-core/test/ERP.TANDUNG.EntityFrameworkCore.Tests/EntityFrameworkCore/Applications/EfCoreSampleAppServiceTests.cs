@@ -1,3 +1,4 @@
+using ERP.TANDUNG.Public.Samples;
 using ERP.TANDUNG.Samples;
 using Xunit;
 

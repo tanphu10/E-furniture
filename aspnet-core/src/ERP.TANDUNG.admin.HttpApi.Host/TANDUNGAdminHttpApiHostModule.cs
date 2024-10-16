@@ -33,6 +33,7 @@ using Volo.Abp.VirtualFileSystem;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Identity;
 
 namespace ERP.TANDUNG.Admin;
 
@@ -49,6 +50,14 @@ namespace ERP.TANDUNG.Admin;
 )]
 public class TANDUNGAdminHttpApiHostModule : AbpModule
 {
+    public override void PreConfigureServices(ServiceConfigurationContext context)
+    {
+        PreConfigure<IdentityBuilder>(builder =>
+        {
+            builder.AddDefaultTokenProviders();
+        });
+
+    }
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         var configuration = context.Services.GetConfiguration();
@@ -119,6 +128,10 @@ public class TANDUNGAdminHttpApiHostModule : AbpModule
         context.Services.Configure<AbpClaimsPrincipalFactoryOptions>(options =>
         {
             options.IsDynamicClaimsEnabled = true;
+        });
+        context.Services.AddAuthorization(opt =>
+        {
+            opt.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
         });
     }
 

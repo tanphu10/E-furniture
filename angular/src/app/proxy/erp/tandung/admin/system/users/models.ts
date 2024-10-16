@@ -9,6 +9,11 @@ export interface CreateUserDto {
   password?: string;
 }
 
+export interface SetPasswordDto {
+  newPassword?: string;
+  confirmPassword?: string;
+}
+
 export interface UpdateUserDto {
   name?: string;
   email?: string;

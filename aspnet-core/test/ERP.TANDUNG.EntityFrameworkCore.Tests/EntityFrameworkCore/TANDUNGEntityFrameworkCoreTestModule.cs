@@ -15,7 +15,7 @@ using Volo.Abp.Uow;
 namespace ERP.TANDUNG.EntityFrameworkCore;
 
 [DependsOn(
-    typeof(TANDUNGApplicationTestModule),
+    typeof(TANDUNGTestBaseModule),
     typeof(TANDUNGEntityFrameworkCoreModule),
     typeof(AbpEntityFrameworkCoreSqliteModule)
     )]

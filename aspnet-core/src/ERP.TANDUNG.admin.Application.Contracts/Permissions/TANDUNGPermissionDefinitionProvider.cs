@@ -11,6 +11,16 @@ public class TANDUNGPermissionDefinitionProvider : PermissionDefinitionProvider
 
         //Catalog
         var catalogGroup = context.AddGroup(TANDUNGPermissions.CatalogGroupName);
+        //Add Manufacturer
+        var manufacturerPermission = catalogGroup.AddPermission(TANDUNGPermissions.Manufacturer.Default, L("Permission:Catalog.Manufacturer"));
+        manufacturerPermission.AddChild(TANDUNGPermissions.Manufacturer.Create, L("Permission:Catalog.Manufacturer.Create"));
+        manufacturerPermission.AddChild(TANDUNGPermissions.Manufacturer.Update, L("Permission:Catalog.Manufacturer.Update"));
+        manufacturerPermission.AddChild(TANDUNGPermissions.Manufacturer.Delete, L("Permission:Catalog.Manufacturer.Delete"));
+        //Add ProductCategory
+        var productCategoryPermission = catalogGroup.AddPermission(TANDUNGPermissions.ProductCategory.Default, L("Permission:Catalog.ProductCategory"));
+        productCategoryPermission.AddChild(TANDUNGPermissions.ProductCategory.Create, L("Permission:Catalog.ProductCategory.Create"));
+        productCategoryPermission.AddChild(TANDUNGPermissions.ProductCategory.Update, L("Permission:Catalog.ProductCategory.Update"));
+        productCategoryPermission.AddChild(TANDUNGPermissions.ProductCategory.Delete, L("Permission:Catalog.ProductCategory.Delete"));
         //Add Product
         var productPermission = catalogGroup.AddPermission(TANDUNGPermissions.Product.Default, L("Permission:Catalog.Product"));
         productPermission.AddChild(TANDUNGPermissions.Product.Create, L("Permission:Catalog.Product.Create"));

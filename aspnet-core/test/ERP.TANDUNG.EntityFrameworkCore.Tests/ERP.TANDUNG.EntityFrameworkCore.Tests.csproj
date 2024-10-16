@@ -10,12 +10,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\ERP.TANDUNG.EntityFrameworkCore\ERP.TANDUNG.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\ERP.TANDUNG.Application.Tests\ERP.TANDUNG.Application.Tests.csproj" />
+    <ProjectReference Include="..\ERP.TANDUNG.Domain.Tests\ERP.TANDUNG.Domain.Tests.csproj" />
+    <ProjectReference Include="..\ERP.TANDUNG.Public.Application.Tests\ERP.TANDUNG.Public.Application.Tests.csproj" />
     <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="8.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.6.1" />
   </ItemGroup>
 
 </Project>

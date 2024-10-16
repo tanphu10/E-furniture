@@ -1,4 +1,5 @@
-﻿using ERP.TANDUNG.Manufacturers;
+﻿using ERP.TANDUNG.Admin.Permissions;
+using ERP.TANDUNG.Manufacturers;
 using ERP.TANDUNG.ProductCategories;
 using Microsoft.AspNetCore.Authorization;
 using System;
@@ -11,22 +12,27 @@ using Volo.Abp.Domain.Repositories;
 
 namespace ERP.TANDUNG.Admin.Catalog.Manufacturers
 {
-    [Authorize]
+    [Authorize(TANDUNGPermissions.Manufacturer.Default,Policy ="AdminOnly")]
     public class ManufacturersAppService : CrudAppService<Manufacturer,
         ManufacturerDto, Guid, PagedResultRequestDto,
         CreateUpdateManufacturerDto, CreateUpdateManufacturerDto>, IManufacturersAppService
     {
         public ManufacturersAppService(IRepository<Manufacturer, Guid> repository) : base(repository)
         {
-
+            GetPolicyName = TANDUNGPermissions.Manufacturer.Default;
+            GetListPolicyName = TANDUNGPermissions.Manufacturer.Default;
+            CreatePolicyName = TANDUNGPermissions.Manufacturer.Create;
+            UpdatePolicyName = TANDUNGPermissions.Manufacturer.Update;
+            DeletePolicyName = TANDUNGPermissions.Manufacturer.Delete;
         }
-
+        [Authorize(TANDUNGPermissions.Manufacturer.Delete)]
         public async Task DeleteMultipleAsync(IEnumerable<Guid> ids)
         {
             await Repository.DeleteManyAsync(ids);
             await UnitOfWorkManager.Current.SaveChangesAsync();
 
         }
+        [Authorize(TANDUNGPermissions.Manufacturer.Default)]
 
         public async Task<List<ManufacturerInListDto>> GetListAllAsync()
         {
@@ -36,6 +42,7 @@ namespace ERP.TANDUNG.Admin.Catalog.Manufacturers
             return ObjectMapper.Map<List<Manufacturer>, List<ManufacturerInListDto>>(data);
 
         }
+        [Authorize(TANDUNGPermissions.Manufacturer.Default)]
 
         public async Task<PagedResultDto<ManufacturerInListDto>> GetListFilterAsync(BaseListFilterDto input)
         {

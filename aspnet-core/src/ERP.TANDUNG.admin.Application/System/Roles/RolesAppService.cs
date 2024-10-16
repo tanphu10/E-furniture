@@ -17,6 +17,7 @@ using Volo.Abp.SimpleStateChecking;
 
 namespace ERP.TANDUNG.Admin.System.Roles
 {
+    [Authorize(IdentityPermissions.Roles.Default, Policy = "AdminOnly")]
     public class RolesAppService : CrudAppService<IdentityRole,
         RoleDto, Guid, PagedResultRequestDto,
         CreateUpdateRoleDto, CreateUpdateRoleDto>, IRolesAppService
@@ -37,7 +38,14 @@ namespace ERP.TANDUNG.Admin.System.Roles
             PermissionManager = permissionManager;
             PermissionDefinitionManager = permissionDefinitionManager;
             SimpleStateCheckerManager = simpleStateCheckerManager;
+            GetPolicyName = IdentityPermissions.Roles.Default;
+            GetListPolicyName = IdentityPermissions.Roles.Default;
+            CreatePolicyName = IdentityPermissions.Roles.Create;
+            UpdatePolicyName = IdentityPermissions.Roles.Update;
+            DeletePolicyName = IdentityPermissions.Roles.Delete;
         }
+
+        [Authorize(IdentityPermissions.Roles.Default)]
         public async Task<GetPermissionListResultDto> GetPermissionAsync(string providerName, string providerKey)
         {
             //await CheckProviderPolicy(providerName);
@@ -110,6 +118,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
             return result;
         }
 
+        [Authorize(IdentityPermissions.Roles.Create)]
         private PermissionGrantInfoDto CreatePermissionGrantInfoDto(PermissionDefinition permission)
         {
             return new PermissionGrantInfoDto
@@ -122,6 +131,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
             };
         }
 
+        [Authorize(IdentityPermissions.Roles.Create)]
         private PermissionGroupDto CreatePermissionGroupDto(PermissionGroupDefinition group)
         {
 
@@ -133,6 +143,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
             };
         }
 
+        [Authorize(IdentityPermissions.Roles.Update)]
         public virtual async Task UpdatePermissionAsync(string providerName, string providerKey, UpdatePermissionsDto input)
         {
             // await CheckProviderPolicy(providerName);
@@ -143,6 +154,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
             }
         }
 
+        [Authorize(IdentityPermissions.Roles.Create)]
         protected virtual async Task CheckProviderPolicy(string providerName)
         {
             var policyName = Options.ProviderPolicies.GetOrDefault(providerName);
@@ -153,6 +165,8 @@ namespace ERP.TANDUNG.Admin.System.Roles
 
             await AuthorizationService.CheckAsync(policyName);
         }
+
+        [Authorize(IdentityPermissions.Roles.Create)]
         public override async Task<RoleDto> CreateAsync(CreateUpdateRoleDto input)
         {
             var query = await Repository.GetQueryableAsync();
@@ -168,6 +182,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
             return ObjectMapper.Map<IdentityRole, RoleDto>(data);
         }
 
+        [Authorize(IdentityPermissions.Roles.Update)]
         public override async Task<RoleDto> UpdateAsync(Guid id, CreateUpdateRoleDto input)
         {
 
@@ -190,6 +205,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
             return ObjectMapper.Map<IdentityRole, RoleDto>(data);
         }
 
+        [Authorize(IdentityPermissions.Roles.Delete)]
         public async Task DeleteMultipleAsync(IEnumerable<Guid> ids)
         {
             await Repository.DeleteManyAsync(ids);
@@ -197,6 +213,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
 
         }
 
+        [Authorize(IdentityPermissions.Roles.Default)]
         public async Task<List<RoleInListDto>> GetListAllAsync()
         {
             var query = await Repository.GetQueryableAsync();
@@ -204,7 +221,7 @@ namespace ERP.TANDUNG.Admin.System.Roles
             return ObjectMapper.Map<List<IdentityRole>, List<RoleInListDto>>(data);
 
         }
-
+        [Authorize(IdentityPermissions.Roles.Default)]
         public async Task<PagedResultDto<RoleInListDto>> GetListFilterAsync(BaseListFilterDto input)
         {
             var query = await Repository.GetQueryableAsync();
